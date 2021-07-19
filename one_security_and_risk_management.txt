@@ -16,8 +16,110 @@
         - Seucity leader should also be business leaders.
         - Building a business case
             - justify the imvestment of time and money
+            - balance security and business concerns
+            - achieve confidentiality, integraty, and availability goals.
             
+    b) Organizational processes
+        - Security Governance
+            - information governance committee
+            - risk management committee
+            - board of directors
+            
+        - integrating security governance
+            - ensure governing bodies understand risks and controls
+            - inform governing bodies of security incidents
+            - provide audit reports to governing bodies
+            
+        - corporate acquisitions
+            - require integration of controls
         
-    b) Security roles and responsibilities
-    c) Control frameworks
+        - corporate divestitures
+            - require separation of controls
+        
+
+    c) Security roles and responsibilities
+        - CISO
+        - Due Care
+        - Due Diligence
+
+    d) Control frameworks
+        - Control Objectives for IT (COBIT) - Business-focused controlframework.
+        - ISO standards
+        - NIST 800-53
+        
+
+
+===================================================================
+
+3. Compliance and Ethics
+
+==================================================================
+
+    a) Legal and compliance risks
+    b) Data privacy
+        - PII (Personally Identifiable Information)
+        - PHI (Protected Health Information)
+        - GAPP Developers
+            - Management
+            - Notice
+            - Choice and Consent
+            - Collection
+            - Use, Retention, and Disposal
+            - Access
+            - Disclosure to third parties
+            - Security
+            - Quality
+            - Monitoring and Enforcement
+                        
+    c) Computer crimes
+        - Computer Fraud and Abuse Act (CFAA)
+        - Electronic Communications Privacy Act (ECPA)
+        - Identity Theft and Assumption Deterrence Act (ITADA)
+        
+    d) Software licensing
+        - Software license agreements
+        - Agreement types
+            - Negotiated contracts
+            - click-through agreements
+            - shrink-wrap agreements 
+
+    e) Intellectual property
+        - Copyrights
+        - copyright protection
+        - trademark protection
+        - patents
+            - novelty
+            - usefulness
+            - non-ovious
+         
+    f) Import and export controls
+        - Export controls
+        - ITAR (International Traffic in Arms Regulations)
+        - Export Administration Regulations(EAR)
+        - Office of Foreign Asset Control(OFAC)
+    
+    g) Data Braches
+        - Reputation damage
+        - Identity theft
+        - fines
+        - Intellectual property theft
+        
+***** EXAM TIPS *****
+        - Many data breach notification laws include exemptions for encryptied informations.
+**************************    
+
+
+h) Ethics
+
+
+
+
+
+
+
+
+
+
+
+
     
