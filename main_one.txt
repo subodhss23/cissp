@@ -1,0 +1,16 @@
+
+
+
+****** Course outline ********
+
+1. Security and Risk Management
+2. Asset Security
+3. Security Engineering
+4. Communications and Network Security
+5. Identity and Access Management
+6. Security Assessment and testing
+7. Security Operations
+8. Software Developement Security
+
+
+

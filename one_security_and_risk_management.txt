@@ -1,0 +1,23 @@
+1. Security Fundamentals
+    
+    a) The goal of information security
+    b) Confidentiality
+    c) Integrity
+    d) Availability
+        - Redundant componenets
+        - High Availability
+        - Fault Tolerance
+        - getting patched
+
+
+2. Security Governance
+        
+    a) Aligning security with the business
+        - Seucity leader should also be business leaders.
+        - Building a business case
+            - justify the imvestment of time and money
+            
+        
+    b) Security roles and responsibilities
+    c) Control frameworks
+    
