@@ -1,0 +1,112 @@
+
+======================================================
+
+1. Data Security
+
+======================================================
+    
+    a. understanding data security
+        - Data at rest
+        - Data in motion
+        - Data in use
+        
+        - Big data problem
+
+    b. Data Security policy
+        - Data Security Policy Criteria
+            - Foundational authority for data security efforts
+            - Clear expectations for data security responsibilities
+            - Guidance for requesting access to information
+            - Process for granting policy exceptions
+
+         - Data Classification
+            - Describes security levels
+            
+        - Classification programs establish the basis for other information and asset handling requirements.
+        
+          - Data storage policies
+            - Appropriate storage locations
+            - Access control requirements
+            - Encryption requirement
+    
+        - Data transmission policies
+            - Appropriate data transmissions
+            - Encryption requirements
+            - Acceptable transmission mechanisms
+           
+        - Data lifecycle policy
+            - describes end-of-life data
+            
+            - Data retention policy
+            - Data disposal policy
+              
+
+    c. Data security roles
+        - Data owners
+            - are business leaders with overall responsibility for data. They set
+                policies and guidelines for their data sets.
+
+**** EXAM TIP ****
+    - GDPR uses the term data controller instead of data owner.
+********************
+        
+
+        - Data Steward
+            - handle the day-to-day data governance activities. They are delegated 
+                responsibility by data owners.    
+        
+        - Data Custodian
+            - actually store and process information and are often IT
+                staff memebers.
+
+        - Data users
+            - work with information in their jobs on a daily basis.
+
+        - Data subjects
+            - are the individuals referred to the collected data
+
+***** EXAM TIP ********
+    - System ownership and data ownership are two different concepts.
+***********************
+
+
+    d. Limiting data collection
+        - provide notice and obtain consent for data collection.
+        - obtain new consent prior to collecting new information.
+        - Minimize information collection
+            - delete unnneded information quickly
+        - Monitor third parties
+            - verify their privacy practices
+        
+
+    e. Data life cycle
+        - explains the different stages of data in the cloud
+            - create
+            - store
+            - use
+            - hare
+            - archive
+            - Destroy
+        
+        - Data sanitization techniques
+            - clearing overwrites sensative information to frustrate casual analysis
+            - purging
+            - destroying
+            
+
+=================================================================================
+
+2. Data Security Controls
+
+================================================================================
+
+    a. Developing security baselines
+    b. Leveraginng industry standards
+    c. Customizing security standards
+    d. Data encryption
+    e. Cloud storage security
+    f. Information classification
+    g. Digitial rights management
+    h. Data loss prevention
+    i. cloud access security brokers 
+
