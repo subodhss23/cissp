@@ -109,17 +109,466 @@
 **************************    
 
 
-h) Ethics
+    h) Ethicsi
+    
+        - Code of ethics
+        
+***** EXAM TIPS ***********
+        - ISC2 members are required to report breaches of Code of Ethics to ISC2 for investigation.
+*****************************
 
 
+====================================================================
+
+4. Security Policy
+
+===================================================================
+
+    a) Security policy framework
+        - Four types of documents
+            - Policies
+            - Standards
+            - Guidelines
+            - Procedures
+    
+**** EXAM TIPS ********
+    - Policy and standards are mandatory. Guidelines are optional. Procedures can go either way.
+***************************
+
+    b) Security policies
+        - Data security policy criteria
+        - Data storage policies
+        - Data transmission policies
+        - Data lifecycle policies
+            - Data retention policies
+            - Data disposal policies
+        
+======================================================================
+
+5. Business Continuity
+
+=====================================================================
+
+    a. Business continuty planning
+        
+**** EXAM TIPS ********
+    - Business continuity planning is also known as continity of operations planning (COOP).
+***************************
+
+        - Defining the BCP Scope
+        - Business Impact Assessment (BIA)
+            - Identifies and prioritizes risk
+        - BIA results
+
+**** EXAM TIPS *****
+    - Business continuity planning in the cloud is a partnership between providers and customers.
+*******************************
+
+    b. Business continuity controls
+        - Single point of failure analysis
+            - Identifies and removes SPOFs
+            - IT contingency Scenario
+
+    c. High availability and fault tolerance
+        - High availability
+            - uses multiple systems to protect against service failure
+        - Fault Tolerance 
+            - makes a single system resilient against technical failures
+        - Load Balancing
+            - Spreads demand across systems
+            
+        - Three components that can take system down are:-
+            - Power supply
+            - Storage
+                - use RAID
+                    - RAID 1 (Disk Mirroring)
+                    - RAID 5 (use three or more disk)
+
+***** EXAM TIPS *****
+        - RAID is a fault-tolerance technique, not a backup strategy.
+*********************
+
+            - Network
+                - Network redundancy
+                    - Multiple internet service providers
+                    - NIC teaming
+                    - Multipath networking (especially for storage)
+            
+            - Redundancy through Diversity
+                - Diversify technologies
+                - Diversify vendors
+                - Diversify cryptography
+                - Diversify security controls   
+
+====================================================================
+
+6. Personnel security
+
+=====================================================================
+
+    a. Personnel security
+        - The insider threat is significant
+        - Background investigations
+        - Monitoring
+        - Manager training
+        - Data loss preventions (DLP)
+        
+    b. Security in the hiring process
+        - Preemployment screening
+        - Employment Agreements        
+
+    c. Employee termination process
+        - Exit interview
+        - Revoke Access Promptly
+        - Retrive organization property
+
+    d. Employee privacy
+        - Sensative personal information
+        - Minimization
+        - Limit Access
+        - Encryption
+        - Masking
+
+    e. Social networking
+        - prevent account hijacking
+
+    f. conducting investigations
+        - types of investigation
+            - Operational or administrative investigation
+                - looking into technology issue
+                - involve root cause analysis
+
+            - criminal investigation
+                - look into possible crimes
+
+            - civil investigation
+                - resolve disputes between parties
+
+            - regulatory investigation
+                - conducted by the government or industry regulators
 
 
+==================================================================== 
+
+7. Risk Management          ************** 
+
+=====================================================================
+
+    a. Risk assessment
+        - Identifies and prioritizes risks
+            - Threats
+                - External force jeopardizing security
+                - natural or artificial
+
+**** EXAM TIPS ****
+    - Threat vectors are the specific methods that threats use to expoloit a vulnerability.
+********************
+
+            - Risk
+                - Combination of a vulnerability and a corresponding threat.
+
+            - Vulnerabilities
+                - Weakness in security controls
+                
+            - Rank by likelihood and impact
+                
+                - Likelihood
+                    - probability that a risk will occur
+                
+                - Impact
+                    - amount of expected damage
+
+                - Qualitative Risk Assessment
+                - Quantitative Risk Assessment
 
 
+    b. Quantitative risk assessment
+        - Perform quantitive risk assessment for a single risk and asset pair.
+        - Asset Value (AV)
+            - The dollar value of an asset.
+        - Asset Valuation Techniques
+        - Exposure Factor (EF)
+            - Expected percentage of damange to an asset
+        - Single-Loss Expectancy (SLE)
+            - Expected dollar loss if a risk occurs one time
+            - AV * EF = SLE
+        - Annualized Rate of Occurrence (ARO)
+            - Number of times a risk is expected to occur each year.
+        - Annualized Loss Expectancy (ALE)
+            - Expected dollar loss from a risk in any given year.
+            - SLE * ARo = ALE
+        - Mean Time to Failure (MTTF)
+            - Average time a nonrepairable component will last.
+        - Mean Time Between Failures (MTBF)
+            - Average time gap between failures of a repairable component.
+        - Mean Time to Repair (MTTR)
+            - Average time required to return a repairable component to service.
+                
+***** EXAM TIPS ********
+    - Be prepared to work through a quantitative risk assessment caluclation on the exam.
+******************************************
+ 
+
+    c. Risk management
+            - Risk Management Strategies
+                - Risk avoidance
+                    - Changes the organization's business practices.
+            
+                - Risk transference
+                    - Shift the impact of a risk to another organization.
+
+                - Risk mitigation
+                    - Reduces the likelihood or impact of the risk.
+
+                - Risk acceptance
+                    - Accepts the risk without taking further action.
+
+            - Risk profile
+                - The full set of risks facing an organization
+
+            - Inherent, Residual, and Control Risk
 
 
+    d. Security control selection and implementation
+        - the procedures and mechanisms that an organization puts in place in manage security risks.
+        - Defense in depth
+            - multiple controls for one objective
+            
+            - Categorized controls by their purpose or mechanism of action.
+                    - Preventive
+                    - Detective
+                    - Corrective
+                    
+            - Technical controls
+            - Operational Controls
+
+**** EXAM TIPS ********
+    - Technical controls are implemented by technology; operational controls are implemented by people.
+*******************************************
+
+            - Management controls
+                - False Positive Errors
+                - False Negative Errors
 
 
+    e. Ongoing risk management
+        -Control Assessments
+            - Test control effectiveness
+            
+        - Measuring control effectiveness
+            - compramied end-user accounts
+            - Vulnerabilities in public-facing systems
+            - Critical findings in initial web application scan
+            - Data breaches requiring notification.
+
+        - RMM (Risk Maturity Model)
+        
+
+    g. Risk management frameworks
+            - provides proven, time-tested techniques.
+            
+            - NIST SP 800-37
+                - Risk Management Framework
+                    - Step 1 - Categorize Information System
+                            - Architectural Description
+                            - Organizational Inputs
+                    - Step 2 - Select Security Controls
+                    - Step 3 - Implement Security Controls
+                    - Step 4 - Access Security Controls
+                    - Step 5 - Authorize Information System
+                    - Step 6 - Monitor Security Controls 
+
+
+     h. Risk visibility and reporting
+        - Risk Register
+            - Tracks risk information
+        
+        - Risk Register contents
+            - Description
+            - Category
+            - Probability and impact
+            - Risk rating
+            - Risk management actions
+            
+        - Risk Register Information Souces
+            - Risk assessment results
+            - Audit findings
+            
+        - Threat Intelligence
+            - Shares risk information
+
+===========================================================================
+
+8. Threat Modeling
+
+=========================================================================
+
+- Threat modeling identifies and prioritizes threats.
+- Use a structured approach to threat management.
+
+    a. Threat intelligence
+        - open-source intelligence
+            - uses public information
+                - Security websites
+                - Vulnerability databases
+                - news media
+                - social media
+                - dark web
+
+        - Email address harvesting
+            - searches for valid addresses
+            
+        - Three factor for threat intelligence:-
+            - Timeliness
+            - Accuracy
+            - Reliablility
+        
+
+    b. Intelligence sharing
+        - TAXII, STIX, and CybOX facilitate information sharing.
+        
+        - functions supported by intelligence
+             - Incident response
+             - vulnerability management
+             - risk management
+             - security engineering
+             - detection and monitoring
+                
+        - ISACs
+            - Information Sharing and Analysis Centers
+
+        
+    c. Identifying threats
+        - Three ways:-
+            - Asset Focus
+                - use the asset inventory as the basis of the analysis.
+            
+            - Threat Focus
+                - identify how specific threats may affect each information system.
+            
+            - Service Focus
+                - identify the imapact of various threats on a specific service.
+
+  
+    d. Threat hunting
+        - An organized, systematic approach to seeking out indicators of compramise on our network using expertise and analytic techniques.
+
+        - Begin by establishing a hypothesis.
+
+        - Indicators of compramise
+            - Unusal binary files
+            - Unexpected processes or resources consumption
+            - Deviations in network traffic
+            - Unexplained log entries
+            - Unapproved configuration changes
+                  
+
+==========================================================================
+
+9. Supply chain Risk Management
+
+==========================================================================
+
+    a. Managing Vendor relationship
+        - Vendor management life cycle
+            - Vendor selection
+            - onboarding
+            - monitoring
+            - offboarding
+    
+    b. Vendor agreements
+        - NDA
+        - Service-Level Requirements (SLRs)
+            - examples:-    
+                - system response time
+                - service availability 
+                - data preservation
+        - MOU (Memorandum of understanding)
+        - BPA (Business partnership agreement)
+        - ISA (Interconnection security agreement)
+        - MSA (Master services agreement)
+        - SOW (Statement of work)
+        - Security and Compliance Terms
+            - Document security  and compliance requirements
+            - Facilitate customer monitoring of compliance
+            - Ensure the right of audit and assessment
+
+    c. Vendor information management
+        - Agreements should contain clear data ownership language.
+        
+        - Data Ownership Provisions
+            - Customer retains uninhibited data ownership.
+            - Vendor's right to use information is limited to activities performed on behalf of the customer.
+            - Vendor's right to use information is limited to activities performed with the customer's knowledge.
+
+        - Agreements should limit data sharing with third parties.
+        - Agreements should include data protection provisions.
+
+
+    d. Vendor audit and assessment
+        - Audits and assessments verify that security contols are functioning properly.
+        - Evaluate security controls
+        - Report on their effectiveness
+        - Recommend improvements
+
+        - Audits follow a formal standard and use planned tests.
+        
+        - Internal auditors
+        - External auditors
+
+        - Audits should have clearly defined scopes.
+
+        - User access reviews
+            - validate rights and permissions
+        
+
+    e. Cloud audits
+        - The use of cloud services adds complexity to audits and assessments.
+        - The use of cloud services provides expands the scope of the audit.
+        - Service Organization Control (SOC) Reports
+        - Three types of SOC reports:-
+            - SOC 1
+                - provides assurance required for customer financial audits
+
+            - SOC 2
+                - provides detailed assurance of confidentiality, integrity, and availability controls
+
+            - SOC 3 
+                - provides high-level public reporting of confidentiality, integrity, and availability controls.
+
+            - type I report
+                - Describes the controls that the service provider has in place and an opinion on the suitability of those controls
+
+            - type II report
+                 - Includes the same information as a Type I report along with the results of control testing by the auditor.
+
+        -SSAE 18 applies in the US
+        -ISAE 3402 applies internationally.
+
+
+    f. Security services providers
+        - Managed service providers (MSPs) offer information technology services to customers.
+        - Managed Security Service Providers (MSSPs) provide security services for other organizations as a managed service.
+        
+**** EXAM TIPS *******
+    - MSSPs may also be reffered as to security as a service (SECaaS).
+****************************************
+
+        - Cloud access security brokers (CASBs) add a third-party security layer to the interactions that users have with other cloud services.
+            - Network-Based CASB
+            - API-Based CASB
+
+===========================================================================
+
+10. Security awareness training
+
+==========================================================================
+
+    a. Security awareness training
+    b. Compliance training
+    c. Measuring compliance and security posture
+
+==========================================================================
 
 
     
