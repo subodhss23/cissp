@@ -203,4 +203,134 @@ h. Data loss prevention
         - Host-Based DLP
             - Uses software agents intalled on a single system
 
-        - 
+        - Network-Based DLP
+            - Scans network transmissions for sensative information
+
+        - Pattern matching
+            - Recognizes known patterns of sensative information, such as socal security numbers
+
+        - Watermarking
+            - Identifies sensative information using electronic tags
+
+        - Cloud-based DLP systems operate as managed security services.
+
+
+i. Cloud access security brokers
+        
+        - Managed service providers (MSPs) offer information technology services to customers.
+
+        - Managed Security Providers (MSSPs) provide security services for other organizations
+            as a managed service.
+
+        - MSSps must be carefully monitored.
+
+        - MSSP service examples:-
+            - Manage an entire security infrastructure
+            - Monitor system logs
+            - Manage firewalls or networks
+            - Perform identity and access management
+
+******** EXAM TIPS ***********
+    - MSSPs may also be referred to as security as a service (SECaaS).
+**************************************
+
+        - Cloud Access Security Brokers (CASBs) add a third-party security layer to the
+            interactions that users have with other cloud services.
+
+        - Network-Based CASB
+            - Broker intercepts traffic between the user and the cloud service, monitoring for
+                security issues.
+            - Broker can block requests.
+
+        - API-Based CASB
+            - The broker queries the cloud service via API.
+            - Broker may not be able to block requests, depending upon API capabilities.
+
+        - MSSP relationships should be carefully documented.
+    
+
+===============================================================================================
+
+3. Change and Configuration Management
+
+===============================================================================================
+
+    a. Change management
+
+        - Change comes frequently in the world of information technology.
+
+        - Change is good
+            - But it must be controlled!
+        
+        - Change management
+            - Ensures that an organization follows a standard process for requesting, reviewing,
+                approving, and implementing changes to information systems.
+
+        - Request For Change (RFC)
+            - Description of the change
+            - Expected impact
+            - Risk assessment
+            - Rollback plan
+            - Identity of those involved
+            - Proposed schedule
+            - Affected configuration items
+        
+        - Changes must be approved by relevant authorities.
+
+        - Routine changes may be preapproved.
+
+
+    b. Configuration and asset management
+
+        - Tracks specific device settings.
+
+        - Baselines
+            - Provide a configuration snapshot.
+        
+        - Versioning
+            - Assigns numbers to each version.
+
+        - Diagrams serve as important configuration artifacts.
+
+        - Standardize Device Configurations
+            - Naming conventions
+            - IP addressing schemes
+        
+        - Change and configuration management help ensure a stable operating environment.
+
+    
+    c. Physical asset management
+        
+        - Maintaining control of physical assets begins with an asset inventory.
+
+        - Asset management should follow a lifecycle approach.
+
+        - Data updates are critical.
+
+        - Media management
+            - Tracks highly sensitive data
+
+
+    d. Supply chan vulnerabilities
+        
+        - Security issues may arise in the supply chain.
+        
+        - Running products that lack vendor support introduces significant security risks.
+
+        - End-of-sale
+            - product will no longer be offered for purchase, but the vendor will support existing
+                customers.
+     
+        - End-of-support
+            - The vendor will reduce or eliminate support for existing users of the product
+
+        - End-of-life
+            - The vendor will no longer provide any suppport or updates for the product
+
+        - Vendors may fail to provide adequate supprt for existing products.
+
+        - Vendors may not disclose the use of embedded systems.
+
+        - Mitigate risks associated with data storage and other vendor dependencies.
+
+
