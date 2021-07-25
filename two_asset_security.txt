@@ -110,3 +110,97 @@
     h. Data loss prevention
     i. cloud access security brokers 
 
+
+
+==========================================================================
+
+
+d. Data encryption
+
+- full disk encryption
+- hardware security modules (HSM) 
+    - Trusted Platform Modules(TPMs) bring hardware encryption to typical computers.
+- Self-Encrypting Drive(SED)
+    - performs encryption automatically
+
+
+e. Cloud storage security
+
+    - cloud storage security controls
+        - encryption
+        - access control
+
+    - Encryption keys must be protected!
+
+    - Access control
+
+f. Information classification
+
+    - Data Classification Policy 
+        - Assigns information into categories, known as classifications,
+        which determine storage, handling, and access requirements.
+
+    - Assign classifications based upon
+        - sensitivity of information
+        - criticality of information
+        
+    - classification levels
+        - military classification
+            - Top secret
+            - Secret
+            - Confidential
+            - Unclassified
+            
+    - Business classification
+        - Highly sensitive
+        - Sensitive
+        - Internal
+        - public
+
+    - Classification guides other security decisions.
+
+    - Assets may also be assigned a classification label.
+
+    - Assume that information on a system is classified at the highest
+        level authorized for use on that system.
+
+    - Labeling Requirement
+        - Identifies sensative information
+
+    - Securely dispose of information when no longer needed.
+
+
+g. Digital rights management
+    
+    - Business need to protect their intellectual property.
+    
+    - Information Rights Managemenet(IRM)
+        - Enforcing data rights
+        - Provisioning access
+        - Implementing access control models
+       
+    - Digital rights Management (DRM) 
+        - Provides the owner of intellectual property with the technical means to prevent the
+            unauthorized use of their content through the use of encryption technology.
+
+        - FairPlay was an early example of DRM in the music industry.
+    
+        - Business Application of DRM
+            - Protect trade secrets and other intellectual property
+            - Limit redistribution of information
+            - Revoke access after expiration date
+      
+  
+h. Data loss prevention
+    
+        - Organizations routinely handles sensitive information.
+        
+        - Data Loss Prevention (DLP)
+            - Technology solutions that search systems and monitor networks for sensative
+                information that is unsecured and provide the ability to remove the information,
+                block the tranmission, or encrypt the stored data.
+
+        - Host-Based DLP
+            - Uses software agents intalled on a single system
+
+        - 
