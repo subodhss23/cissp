@@ -1,0 +1,513 @@
+
+=================================================================
+1. Secure Design
+=================================================================
+
+a. Security design principles
+
+    - Security is a design element
+        - bolt-on security rarely works.
+
+    - Subject/Object Model
+        - subject ------> object
+        - User    ------> File
+        - Process ------> Memory
+     
+    - Clearly designating subjects and objects improves design quality.
+
+    - Failure modes
+        - fail open
+            - failed security controls are bypassed
+
+        - fail secure
+            - failed security controls block access
+
+        - IDS (intruser detection system) failure
+            
+        - Isolation and segmentation
+
+
+b. Security models
+
+    - Security models provide a theoretical way of describing security controls.
+
+    - Three levels of security models:-
+
+    i) Multilevel security
+        - Systems designed to operate at different security levels simultaneously while
+            enforcing confidentiality and integrity constraints that restrict access
+            between security levels.
+
+     ii) Bell-LaPadula Model
+        - Enforces confidentiality
+        - simple security rule
+            - No "read up"
+        - *-property
+            - No "write down" 
+        
+**** EXAM TIPS **********
+    - The Bell-LaPadula model is rarely implemented outside of military applications.
+*************************
+
+    iii) Biba Model
+        - Enforces integrity
+        - Simple integrity property
+            - No "read down"
+        - *-Integrity property
+            - No "write up"
+
+***** EXAM TIPS ************
+    - THE Bell-laPadula and Biba models are important for the exam but rarely used in the 
+        real world.
+*****************************
+
+
+c. Security evaluation models
+
+    - Cyber security programs first appeared within goverment agencies.
+    - Trusted Computer System Evaluation Criteria (TCSEC)
+    - Common Criteria
+        - Unified evaluation processes
+    - Certification and Accreditation
+        - Certification
+            - Determines that a system meets security criteria
+        - Accrediation
+            - Approves use of a system in a specific environment
+        - Accrediation Decisions
+            - Authorization to Operate (ATO)
+            - Interim Authorization to Operate (IATO)
+            - Interim Authorization to Test (IATT)
+            - Denial of Authorization to Operate (DATO)
+
+***** EXAM TIPS **********************
+    - Certification and accreditation are different.
+    - Accreditation and authorization are the same.
+**************************************************** 
+
+
+d. Seperation of duties
+
+    - No individual should possess two permission that, in combination, allow them to
+        perform a highly sensative action.
+    
+    - Two-person Control
+        - requires the authorization of two separate individuals to carry out a sensitive
+            actions; also known as dual control.
+
+
+f. Selecting security controls
+
+    - Security Controls
+        - Procedures and mechanisms that an organization puts in place to manage security risks.
+        - Defense in Depth
+            - Multiple controls for one objective
+            
+    - We categorize controls by their purpose for mechanism of action.
+    
+        i) Preventive
+            - Stop a security issue from occurring in the first place.
+            
+        ii) Detective
+            - Identify that a potential security issue has taken place.
+        
+        iii) Corrective
+            - Remediate security issue that have already occured.
+
+        iv) Deterrent
+            - Prevent an attacker from seeking to violate security policies.
+
+        v) Physical
+            - Impact the physical world.
+
+        vi) Compensating
+            - Fill a known gap in a security environment.
+
+    - Technical controls
+        - Use technology to achieve security control objectives.
+
+    - Operational controls
+        - Use human-driven processes to manage technology in a secure manner.
+
+**** EXAM TIPS ******
+    - Technical controls are implemented by technology; operational controls are implemented by people.
+************************
+
+    - Management controls
+        - Imporve the security of the risk maangement process itself
+
+
+g. Privacy by design
+    
+    - Privacy by design seeks to incorporate privacy practices into the design and implementation of systems.
+
+    i) Proactive, not reactive; preventive, not remedial.
+    ii) Privacy as the default setting
+    iii) Privacy embedded into design
+    iv) Full functionality: positive sum, not zero sum
+    v) End-to-end security full lifecycle protection
+    vi) Visibility and transparency: keep it open
+    vii) Respect for user privacy: keep it user-centric
+        
+
+h. Secure defaults
+
+    - Secure defaults ensure that a system runs in a secure mode if we don't configure it otherwise.
+
+    - The zero-trust model applies least privilege to network access.
+
+    - Zero-trust replaces network-based access control with strong user-focused authentication.
+
+    - Trust, but verify.
+
+
+========================================================================================
+
+2. Virtualization and Cloud Computing
+
+========================================================================================
+
+a. What is the cloud?
+    
+    - Cloud computing is transforming information technology across industries.
+    
+    - Delivering computing resources to remote customer over a network.
+    
+    - NIST Defination
+        - A model for enabling ubiquitous, convenient, on-demand network access to shared
+            pool of configurable computing resource (e.g, network, servers, storage, 
+            applications, and services) that can be rapidly provisioned and released with
+            minimal management effort or service provider interation.
+
+
+b. Cloud computing roles?
+
+    - Two primary roles:-
+        i) Cloud service provider
+        ii) Cloud customer
+
+        - cloud service partner
+            - provides add- on services
+    
+        - Cloud Access Security Broker (CASB)
+            - provides IAM services
+    
+
+c. Drivers for cloud computing
+        
+        - On-Demand Self-Service
+            - Available when you need it.
+
+        - Scalability
+            - Increasing capacity with demand.
+
+            - Horizontal Scaling
+                - Adding more servers to the pool to meet increased demand
+
+            - Vertical scaling
+                - Adding more resources (eg, CPU or memory) to existing server to meet increasing demand.
+
+            - Elasticity
+                - Expanding and contracting quickly
+
+            - Broad Network Access
+                - Anytime, anywhere access
+
+            - Measured Service
+                - Paying only for what you consume
+
+
+d. Multitenant computing
+
+        - Multitenancy
+            - Shared computing resources
+
+        - Isolation
+            - users don't impact each other.
+
+        - Oversubscription
+            - Sold capacity exceeds actual capacity.
+
+        - Resource pooling
+            - CPU and memory shared among users.
+
+e. Virtualization
+    
+    - Host machines run on physical hardware.
+    - Host machines provide services to several virtualized guest machines.
+    - The hypervisor tricks each guest into thinking it is running on dedicated hardware.
+    
+
+    - Two types of hyervisors:-
+        i) Type 1 Hypervisor
+            - Hypervisor run on top of physical hardware and runs guest virtual machine on top of that.
+            - one used in data centers.
+
+        ii) Type 2 Hypervisor
+            - Hypervisor runs on top of host OS parallel to other application, and runs guest vms on top.
+            - one used in personal computers.
+
+
+    - Virtualization Security
+        - Virtual machine isolation is critical
+        - Each server must have access to only its own memory and storage.
+        - VM escape attacks attempt to break out of the guest environment.
+        
+    - Virtualization platform must be patched against security vulnerabilities.
+
+    - VM Sprawl
+        - Unused and unmaintained servers.
+
+    
+f. Desktop and application virtualization
+
+    - Virtual Desktop Infrastructure (VDI)
+            - provides network-bases access to a desktop computing environment.
+
+    - Application Virtualization
+            - Streams applications to the user's desktop
+    
+    - Desktop and application virtualization enable the use of thin client devices.
+
+
+g. Cloud compute resources
+
+    - Virtualized servers run in cloud data centers.
+
+    - High Availability
+        - Uses resources across zones
+    
+    - Instance Awareness
+        - Reduces VM sprawl.
+    
+
+h. Containerization
+
+    - Containers
+        - Lightweight application virtualization
+
+    - Virtual servers run on top of a hypervisor.
+
+    - Containers are a lightweight alternative to virual servers.
+
+    - Containers
+        - Contain application code and dependencies only
+        - Run on containerization platforms
+        - Use the host's operating system
+
+    - isolation is the most critical container security issue.
+
+
+i. cloud activities and the Cloud Reference Architecture
+    
+    - ISO/IEC 17789:2014
+        - Information technology - Cloud computing - Reference architecture
+        
+**** EXAM TIPS ******
+     Reference architectures provide a useful framework, but they're just a starting point.
+**********************
+
+    - The ISO cloud reference architecture defines cloud computing activities.
+
+    - Customer Activities
+        - Use cloud services
+        - perform service trials
+        - monitor services
+        - administer security
+        - provide billing reports
+        - handle problems
+        - administer tenancies
+        - perform business administration
+        - select services
+        - request audit reports
+
+    - Provider Activities
+        - Prepare systems and services
+        - Monitor services
+        - Manage assets
+        - Provide audit data
+        - Manage customer relationships
+        - perform peering
+        - ensure compliance
+        - provider connectivity
+        - many other activities
+   
+    - partner activities
+        - Design, create, and maintain services
+        - test services
+        - perform audits
+        - set up legal agreements
+        - acquire the access customers
+        - access the marketplace
+
+
+    - Cloud Controls Matrix (CCM)
+
+
+j. Cloud deployment models
+    
+    - Cloud deployment models describe the cloud environmenet types that organizations might use.
+
+    - Private cloud
+        - Organization uses a dedicated cloud infrastructure.
+
+    - public cloud
+        - Organization uses a multitenancy infrastructure.
+
+    - Hybrid cloud
+        - Organization uses both private and public cloud.
+
+    - public cloud computing uses a shared responsibility model.
+
+    - Community cloud
+        - shared with a consortium
+
+**** EXAM TIPS ********
+    - No cloud model is inherently superior to the other approaches. It all depends on the context.
+************************
+
+
+k. Cloud service categories
+
+    - Xaas
+        - Anything as a service
+
+    - Cloud Service Categories
+        - SaaS (Software as a Service)
+            - Customer purchases an entire app.
+
+        - PaaS (Platform as a Service)
+            - Customer purcheses app platform.
+
+        - IaaS (Infrastructure as a Service)   
+            - Customer purchases servers/storage.
+
+        - Function as a Service(Faas)
+            - Also known as serverless computing.
+
+
+l. Edge and fog computing
+    
+    - Edge computing
+        - Computing on the endpoint
+
+    - Fog computing
+        - computing near the endpoint
+
+============================================================================================
+
+3. Memory
+
+===========================================================================================
+
+a. Memory protection
+
+    - Memory is a shared resources taht must be protected.
+
+    - Two types of memory:-
+        -RAM
+        -ROM
+    
+    - Memory management:-
+        - Tracks what application are using each segment of memeory
+        - Grants request for additional memory
+        - Frees up memory that is no longer needed.
+
+    - Memory protection:-
+        - Restricts access to memory segments
+
+    - Segmentation Fault
+        - Error that occurs when an application requests unauthorized access to a memory segment.
+
+    - Memory leak
+        - Application accumulate memory over time and fail to release it when no longer needed.
+
+
+b. Hardware encryption
+
+    - Encryption protects sensative data by transforming it so that it may not be read by 
+        anyone without the appropriate decryption key. 
+    
+    - AES Crypt
+        - Open-source file encryption
+
+    - Full-Disk Encryption (FDE)
+        - protects and entire drive
+
+    - Hardware Security Modules (HSM)
+        - Manages encryption Keys
+
+    - Trusted Platform Modules (TPMs) 
+        - bring hardware encryption to  typical computers.
+
+    - Self-Encrypting Drive (SED)
+        - Performs encryption automatically
+
+
+c.Hardware and firmware security
+
+    - Operating systems must be loaded frrom disk during the boot process.
+    
+    - Basic Input/Output System (BIOS)
+        - Lightweight operating system stored in firmware that provides the basic 
+            functionality necessary to load the full operating system from disk.
+  
+    - Unified Extensible Firmware Interface (UEFI)
+        - Replaces BIOS with a flexible alternative
+
+    - Secure Boot
+        - Read the boot loader from disk.
+        - Compute the hash of the boot loader.
+        - Decrypt the boot loader's digitial signature.
+        - Verify that the signature is accurate.
+        - Booting stops abruptly if the boot loader's digital signature fails verification.
+      
+    - Remote attestation sends a compliance report to an external server.
+
+    - Measured Boot
+        - Each device verifies the hash of the next device in the boot chain.
+        - Attestation
+            - Confirmed hashes are stored in the TPM.
+
+    - Hardware root of trust
+        - verifies firmware integrity
+
+    - Together, the hardware root of trust, UEFI, TPM, and secure boot provide trusted execution.
+
+    - Electromagnetic Interference (EMI) 
+        - Electrmagnetic waves, normally generated unintentionally, that cause disruption to
+            nearby electronic equipment.
+
+
+==========================================================================================
+
+4. Server Security Issue
+
+==========================================================================================
+
+a. Server and database security
+
+-
+
+b. NoSQL database
+
+-
+
+c. Distributed and high performance computing
+
+
+-
+
+===========================================================================================
+
+5. Web Security issues
+
+============================================================================================
+ 
+
+
+
+
+
+
+
+
