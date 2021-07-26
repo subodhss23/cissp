@@ -484,18 +484,46 @@ c.Hardware and firmware security
 
 ==========================================================================================
 
+
 a. Server and database security
 
--
+    i. Controlling bandwith consumption
+        - Use network devices and server operating system
+
+    ii. Understanding sensitive data flows
+        - Use data flow maps to apply controls appropriately
+
+    
+    - Database servers store massive amounts of sensitive information.
+
+    - Database Focused Attacks:-
+        i) Aggregation
+            - Individuals with a low-level security clearance may be able to piece 
+                together sensitive information by combining the facts available to them.
+
+    
+        ii) Inference
+            - Individuals can figure out sensitive information from the facts available to them.
+
 
 b. NoSQL database
+    
+    - Uses key-value stores
 
--
+    - key-value store.
+
+    - Each key may have a different structure of values.
+
+    - NoSQL permissions
+
 
 c. Distributed and high performance computing
 
+    - Client/Server computing
 
--
+    - Large-Scale Parallel Data
+        - Computing problems that require the use of extremely large data sets and processing
+
 
 ===========================================================================================
 
@@ -503,10 +531,479 @@ c. Distributed and high performance computing
 
 ============================================================================================
  
+a. The Open Web Application Security Project (OWASP) maintains a list of common web 
+        security issue.
+
+b. SQL injection prevention
+
+c. Cross-site scripting prevention
+
+d. Defending against directory traversal
+
+f. Overflow attacks
+
+g. Session hijacking
+
+h. Privilege escalation
+
+
+==========================================================================================
+
+6. Embedded systems Security    
+
+=========================================================================================
+
+a. Industrial control systems
+
+
+    - Industrial control systems (ICSs) monitor and control industrial processes.
+
+    - ICS Deployments
+        - Building automation systems
+        - Workflow automation systems
+        - Process automation systems
+
+    - ICSs are hacker targets.
+        - Attacks have dramatic implications
+        - Systems are often not well secured
+        - Systems are less likely to be current on patches.
+
+    - ICS types
+        - Supervisory control and data acquisition (SCADA)
+            - Remote monitoring
+            - Remote telementry
+            - Reports back to control systems
+            - Multiple point of attack
+
+        - Distributed control systems (DCSs)
+            - Focuses on controling processes
+            - Use sensors and feedback systems
+            - Has multiple points of attack
+    
+        - Programmable logic controllers (PLCs)    
+            - Handles sepcialized input and output
+            - Ensures uninterrupted processing
+            - Connects to a Human Machine interface
+
+            - Modbus Protocol
+
+
+b. Internet of Things
+
+    - IoT security challenges
+        - Use difficult-to-update software and underlying OS
+        - Connect to home and office wireless networks
+        - Connect back to cloud services for command and control
+
+    - Sensors and Facility Automation
+        - Hospital and medical systems
+        - Aircraft and drones
+        - Utilities and smart meters
+
+
+c. Secure smart devices
+
+    - check for weak default passwords. 
+    - Check for updates
+    - Firmware version control
+    - Security wrappers
+
+
+d. Secure networking for smart devices
+
+    - Network segmentation
+    - Segmenting embedded devices increases network security.
+
+****** EXAM TIPS ********
+    - Network segmentation is the most important control for embedded devices.
+**************************
+
+    - Application firewalls provide added protection for embedded devices.
+
+****** EXAM TIPS ***********
+     - Embedded device security controls are effective for mainframes as well.
+****************************
+
+
+e. Embedded systems
+
+    - Technology components of an Internet of Things device that place a full computer inside
+        of another, large system.
+    
+    - A system on a chip (SoC) combines processing, memory, networking, and other embedded
+        system components on a single chip.
+
+    - Field-programmable gate arrays (FPGAs) are chips that allow dynamic reprogramming.
+
+    - Real-time operating systems (RTOSs) provide reliable and secure computing for IoT devices.
+
+    - CAN Bus
+        - Facilities embedded device communications
+
+    - Embedded System Constraints
+        - limited power
+        - limited compute capabilities
+        - limited capacity
+        - difficult to run cryptography
+        - difficult to do patching
+
+
+f. Communications for embedded devices
+
+    - sim cards.
+    
+    - Zigbee and Z-Wave standards provide short-range communication for smart devices.
+
+    - Radio frequency communications work even when cellular networks are not available.
+
+    - Satellite communication is costly but almost everywhere on Earth.
+
+
+============================================================================================
+
+7. Encryption
+
+===========================================================================================
+
+a. Understanding encryption
+
+    - Encryption protects sensative information from unauthorized disclosure.
+
+    - The use of mathematical algorithms to transform information into an encrypted form that
+        is not redable by unauthorized individuals.
+
+    - Encryption
+        - Converts information from plaintext form into ciphertext
+
+    - Decryption
+        - Converts ciphertext messages back into their plaintext form
+
+
+b. Symmetric and asymmetric cryptography
+
+    - Symmetric encryption
+        - encryption and decryption use the same secret key.
+        
+        - we can compute the number of symmetric keys required for a group to communicate.
+
+        - n(n-1)/2
+
+        
+    - Asymmetric encryption
+        - encryption and decryption use different keys from the same pair.
+        - asymmetric algorithms use keypairs.
+        - public key
+            - freely distributed commications partners
+        - private key
+            - kept secret
+        - Anything encrypted with one key from a pair can be decrypted with the other key
+            from that same pair.
+
+***** EXAM TIPS **********************
+    - Keys used to encrypt and decrypt using asymmetric cryptography must be from the same pari.
+***************************************
+
+        - Asymmetric cryptography is slower than symmetric cryptography
+
+
+c. Goal of cryptography
+
+    - There are five goals we can achieve by using cryptography.
+        i) Confidentiality
+            - no unauthorized access.
+                - Data at rest
+                - Data in transit
+                - Data in use
+        ii) Integrity
+            - no unauthorized changes
+        iii) Authentication
+            - proof of identity claims
+        iv) Obfuscation
+            - Hiding sensitive data
+        v) Non-Repudiation
+            - Verification of origin
+            - only possible with asymmetic cryptography.
+
+
+d. Codes and ciphers
+
+**** EXAM TIPS ***************
+    - Codes and ciphers are related concepts, but you should know the difference when you 
+       take the exam.
+****************************
+   
+     - Code
+        - A system that substitutes one word or phrase for anther; intended to provide
+            secrecy and/or efficiency.
+        
+     - Cipher
+        - Asystem taht use mathematical algorithms to encrypt and decrypt messages.
+
+    - Stream Ciphers
+        - Operate on one character, or bit, of a message at a time.
+
+    - Block ciphers
+        - Operate on large segments of the message at the same time.
+
+    - Substitution Ciphers
+        - Change the characters in a message.
+
+    - Substitution ciphers that shift each letter by an increment are called rotation ciphers. (ROT)
+
+    - Transposition Ciphers
+        - Rearrange the characters in a message.
+
+    - Substitution and transposition are the building blocks of modern cryptography.
+
+
+e. Cryptographic math
+
+    - Math plays a central role in cryptography
+
+    - Exclusive or (XOR)
+        - True when exactly one of two input values is true.
+   
+    - Cryptography relies upon pseudorandom number generation because we lack a  source of 
+        truly random numbers.
+
+    - Confusion
+        - Every bit of the ciphertext must depend upon more than one bit of the encryption key.
+    
+    - Diffusion
+        - Changing a single bit of the plaintext should change about 50% of the ciphertext bits.
+
+    - Obfuscation
+        - Uses cryptography to hide source code from users.
+
+
+e. Choosing encryption algorithms
+
+*** EXAM TIPS *********
+    - Don't try to build your own encryption algorithm unless you really know what you're doing.
+***************************
+
+    - Security through Obscurity
+        - Security of an algorithm depends upon the secrecy of its approach.
+    
+    - Choosing your key length
+
+    - Use tested encrytion modules and cryptographic service providers.
+
+
+
+f. The perfect encryption algorithm
+
+    - One-Time pad
+        - It is an unbreakable encryption algorithm
+        - Sender and receiver have identical pads
+        - Key is at least as long as the message
+
+
+g. The cryptographic lifecycle
+
+    - The cryptographic lifecycle manages the use of encryption materials over time.
+
+    - As cryptographic algorithms age, they often become insecure.
+
+    - NSIT 5 phase cryptograhic lifecycle:-
+        i) initiation
+        ii) development and acquisition
+        iii) implementation and assessment
+        iv) operations and maintenance
+        v) sunset
+
+
+=======================================================================================
+
+8. Symmetric Cryptography
+
+======================================================================================
+
+a. Data encryption standard (DES)
+    
+    - Designed by IBM in the 1970s
+    - Intended to serve as federal encryption standard
+    - Replaced untested algorithms used by agencies
+    - Enhanced interoperability of communications
+
+    - DES uses an encryption operation called the Feistel function for 16 rounds of encryption.
+    - Each F-box performs a combination of substitution and transposition operations.
+    - The Feistel function repeats 16 times in a single DES encryption operation.
+    - DES is no longer considered secure.
+    
+    - Key Facts about DES **************
+        - Symmetric encryption algorithm
+        - Block cipher operation on 64-bit blocks
+        - Key length of 56 bits
+        - Now considered insecure
+        
+
+b. 3DES
+
+    - Old cryptograhic equipment designed to work with DES was suddenly insecure.
+    
+    - Triple DES
+        - Applies DES encryption three times
+
+    - Triple DES applies DES three times with three keys: K1, K2, and K3.
+
+    - DES keying options
+        - Keying option 1
+            - k1 != k2 != k3
+        - Keying option 2
+            - k1 = k3, k1 != k2, k2 != k3
+        - keying option 3
+            - k1 = k2 = k3
+
+******* EXAM TIPS ***********
+    - Double DES is no more secure than standard DES, due to the meet-in-the-middle attack.
+*********************************    
+
+
+c. AES, Blowfish, and Twofish
+
+    - The Rijndael algorithm won a competition to become the Advanced Encryption Standard(AES).
+    - AES uses substitution and transposition.
+    - AES is symmtric encryption
+    - Block cipher operation on 128-bit blocks
+    - key length of 128, 192, or 256 bits.
+    - Considered secure.
+
+    - Blowfish
+        - is a public domain algorithm.
+        - designed as a DES replacement.
+        - Uses a Feistel network.
+        - combines substitution and transposition.
+
+        - symmetric encryption algorithm
+        - block cipher operating on 64-bit blocks
+        - key length anywhere between 32 and 448 bits
+        - not considerded secure.
+
+    - Twofish
+       - Designed as a DES replacement
+       - placed into the public domain
+       - use a Feistel network
+       - combines substitution and transposition
+
+        - symmetic encryption algorithm
+        - block cipher operating on 128-bit blocks
+        - key length of 128, 192, or 256 bits
+        - considered secure
+
+
+d. RC4
+
+    - symmetric steam cipher
+    
+    - RC4 was a trade secret from its inverntion in 1987 until its public disclosure in 1994.
+    
+    - RC4 and Network Encryption
+        - Wired equivalent privacy (WEP)
+        - Wi-fi protected access (WPA)
+        - Secure sockets layer (SSL)
+        - Transport layer security (TLS)
+
+    - RC4 uses a pseudorandom keystream.
+
+    - RC4 is no longer considered secure.
+
+    - symmetric encryption algorithm
+    - stream cipher
+    - variable length key between 40 bits and 2048 bits
+    - not considered secure
+
+
+e. Cipher modes
+
+    - describes how an algorithm encrypts and decrypts data.
+
+    - Electronic codebook (ECB) mode
+
+    - Encrypting the same block with the same key in ECB mode results in identical ciphertextblocks.
+
+    - Cipher Block Chaining (CBC) mode
+
+    - Counter Mode (CTR)
+        - Galois/Counter mode (GCM) adds authentication capability.
+
+***** EXAM TIPS **********
+    - Counter mode allows block ciphers to act more like stream ciphers.
+***************************
+
+
+f. Steganography
+
+    - Hides data in large files.
+
+    - hiding data in image files.
+
+
+==========================================================================================
+
+9. Asymmetric Cryptography
+
+=========================================================================================
+
+a. RSA (Rivest, Shamir, Adelman)
+
+**** EXAM TIPS*******
+    - Users create RSA key pairs using two large prime numbers.
+*******************************
+
+    - Asymmetric encryption algorithm
+    - Variable length key between 1024 and 4096 bits
+    - Considered secure.
+
+
+b. PGP and GnuPG
+
+    - Pretty Good Privacy (PGP)
+        - Phil Zimmerman's asymmetic algorithm
+    
+    - OpenPGP
+        - open-source implementation of PGP
+
+    - PGP function
+        - Uses public and private keys
+        - combines both symmetic and asymmetric cryptography
+
+    - GnuPG
+        -available for free
+
+    - PGP relies upon other encryption algorithms.
+
+    
+c) Elliptic-curve and quantum cryptography
+
+    - Elliptic curve and quantum cryptography use new approaches.
+
+    - Asymmetric cryptography is based upon the difficulty of solving complex math problems.
+
+    - Factoring prime numbers.
+
+    - Finding a way to solve the prime factorization problem would break modern cryptography.
+    - Elliptic Curve Cryptography (ECC) **** (NOT IN EXAM)
+        - uses the EC discrete log problem.
+        
+    - Quantum computing
+        - Uses quantum mechanics principles
+
+
+===========================================================================================
+
+10. Key Management
+
+========================================================================================
 
 
 
 
+==========================================================================================
+
+8. Symmetric Cryptography
+
+========================================================================================
 
 
 
