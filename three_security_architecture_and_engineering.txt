@@ -1343,32 +1343,188 @@ PFX        | .pfx, .p12         |   P&B        |    .p7b       |
 
 a. Brute force attack
 
-    -
+    - Repeatedly guess keys
+    - also known as chipertext attacks.
+    - Keyspace
+        - the set of all possbile encryptionkey ususable with an algorithm
+    - flawed algorithms may be vulnerable to brute-force attacks.
+
 
 b. Knowledge-based attacks
 
-    -
+    - Frequency analysis
+        - Detects patterns in ciphertext
+    
+**** EXAM TIPS ******
+    - You won't need to perform cryptanalysis on the exam.
+        You just need to know the different rechniques.
+***************************************
+
+    - Known planintext attack
+        - Attacker has access to an unencrypted message.
+    
+    - Chosen plaintext attack
+        - Attacker can create an encrypted message of their choice.
+
+    - Brithday attack
+        - Attacker finds two inputs with the same hash values
+
+    - Birthday problem
+        - Mathematical problem
+
 
 c. Eavesdropping attacks
 
-    -
+    - Rely on a compromised communications path
+        - Network device tapping
+        - DNS poisoning
+        - ARP poisoning
+        
+    - Man-in-the-middle attacks and man-in-the-browser attacks are on-path attacks.
+
+    - Replay attack
+
+    - Preventing replay attacks
+        - using token
+        - using timestamp
+
+    - SSL Stripping
+        - Tricks browser into using unencrypted communications
+
 
 d. Implementation attacks
 
-    -
+    - Cryptographic systems may contain implementation flaws that render them vulnerable to attack.
+    
+    - Fault Injection Attack
+        - Uses externally forced errors
+        
+    - Side-Channel Attack
+        - Measures encryption footprints
+
+    - Timing attack
+        - Measures encryption time
 
 e. Limitations of encryption algorithms
 
-    -
+    - Every encryption algorithm has some weakness.
+
+    - Some algorithms are faster than others.
+
+    - Longer keys lead to stronger security, but more computing power and longer time.
+
+    - Some key choices may have inhernet flaws.
+    
+    - Reusing the same key facilitates cryptanalytic attacks.
+
+    - Cryptographic algorithms and keys have limited longevity.
+
+    - Entropy reduces the predictability of cryptographic methods.
+
+    - Downgrade attacks remove or weaken encryption.
+
 
 f. Ransomware
 
-    -
+    - Encrypts data, demanding payment
+    
+    - Ransomware Target Characteristics
+        - Vulnerability of IT systems
+        - Ability to pay substantial ransoms
+
+    - Mimikatz
+        - steals passwords from memory
+
+    - Backups
+        - provide a safety net for data
+
+    - Antimalware
+        - Protects against infections
+
+******* EXAM TIPS***************
+    - Ransomware is specifically called out in the exam objectives.
+************************************
 
 
 =============================================================================================
 
+13. Physcial Security
 
+============================================================================================
+
+a. Site and facility design
+
+    - Evidence storage location must preserve the chain of custody.
+    - Distribution cabling must be protected against unauthorized access.
+    - Don't forget about operations centers and other sensitive locations.
+
+
+b. Data center environmental controls
+
+    - Data centers contain sensitive electronic equipment.
+    - Data centers have significant cooling requirements.
+    - Expanded Envelope
+        - Between 64.4F and 80.6F
+    
+    - High humidity
+        - leads to condensation that may damage electronic equipment
+
+    - Low humidity
+        - Leads to static electricity that may damage electronic equipment
+
+    - Dew Point Range
+        - Between 42.9F to 50.0F
+
+    - HVAC systems keep temperature and humidity under control.
+
+    - Servers draw cool air in the front and expel hot air out the back.
+
+    - The hot aisle/cold aisle approach makes cooling data centers more efficient.
+
+***** EXAM TIPS *****************
+    - Watch for exam questions that are indirectly covering the hot aisle/cold aaisle strategy.
+***********************************
+
+c. Data center environmental protection
+
+    - Fire is a grave threat in a data center environment.
+
+    - Fire requires three sustaining elements.
+        - oxygen
+        - heat
+        - fuel
+
+    - water will damage electronic equipments
+    
+    - Fire extinguishers
+        - class A   |     Common combustibles (wood, cloth, and trash)
+        - class B   |     Flammable liquids (gasoline and oil)
+        - class C   |     Electric fires (data centers)
+        - class D   |     Heavy metal fires (industrial applications)
+        - class K   |     Kitchen fires (fats and oils)
+
+******** EXAM TIPS *********
+    - Be able to identify the classes of fire extinguisher on the exam.
+****************************
+
+d. Power control
+
+    -
+
+e. Physical access control
+
+    -
+
+f. Visitor management
+
+    -
+
+g. Physical security personnel
+
+    -
+
+
+=========================================================================================
 
 
 
