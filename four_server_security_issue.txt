@@ -1,0 +1,69 @@
+
+
+========================================================================================
+a. Server and database security
+=========================================================================================
+
+    i. Controlling bandwith consumption
+        - Use network devices and server operating system
+
+    ii. Understanding sensitive data flows
+        - Use data flow maps to apply controls appropriately
+
+    
+    - Database servers store massive amounts of sensitive information.
+
+    - Database Focused Attacks:-
+        i) Aggregation
+            - Individuals with a low-level security clearance may be able to piece 
+                together sensitive information by combining the facts available to them.
+
+    
+        ii) Inference
+            - Individuals can figure out sensitive information from the facts available to them.
+
+
+==========================================================================
+
+b. NoSQL database
+
+========================================================================== 
+    
+    - Uses key-value stores
+
+    - key-value store.
+
+    - Each key may have a different structure of values.
+
+    - NoSQL permissions
+
+
+======================================================================================
+
+c. Distributed and high performance computing
+
+==========================================================================================
+
+    - Client/Server computing
+
+    - Large-Scale Parallel Data
+        - Computing problems that require the use of extremely large data sets and processing
+            power that can't be handled by a single server or set of servers. These problems
+            are divided into pieces and handled by distributed computing systems.
+
+    - Grid Computing
+        - Assembles the unused processing capability of many computers at different locations
+            to form a virtual supercomputer with a centralized controller.
+
+    - Peer-to-Peer (P2P) computing
+        - Assembles a diverse network of systems to offer a computing service without the 
+            need for a centralized controller
+
+    - P2P Security Concerns
+        - Untrusted participants in the P2P network may gain access to sensitive information.
+        - P2P participants may lose control of their computer systems to malicious P2P agents
+        - P2P nodes may find themselves the targets of law enforcement investigations.
+
+    - Other high performance computing (HPC) applications take advantage of supercomputing technology.
+
+
