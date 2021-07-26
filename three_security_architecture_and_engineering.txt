@@ -996,14 +996,379 @@ c) Elliptic-curve and quantum cryptography
 
 ========================================================================================
 
+a. Key exchange
+
+    - Symmetric algorithms depend upon shared secret keys.
+    
+    - Out-of-band key exchange
+        - uses a different channel
+
+    - out-of-band options
+        - face-to-face meeting
+        - physical mail
+        - telephone call
+
+    - out-of-band key exchange is difficult and time consuming.
+
+    - solution to this problem is In-band key exchange
+
+    - In-band key exchange
+        -securely exchnage keys digitally
 
 
+b. Diffie-Hellman
+
+    - Provides symmetric key exchange capability
+    - based upon work of Ralph Merkle
+    - Implemented by Whitfield Diffie and Martin Hellman
+   
+    - p and g must be large values to achieve strong security.
+
+    - Elliptic curve diffie-Helmann 
+
+
+c. Key escrow
+
+    - Strong encryption presents a problem for law enforcement.
+
+    - Encryption key escrow
+        - allows government access to keys
+        
+    - The clipper chip included technology that would allow government access to encrypted communications.
+
+    - Privacy advocates and industry firms fought strongly against the Clipper chip.
+
+    - Recovery agents
+        - Allow internal access to lost keys
+        
+
+d. Key stretching
+
+    - Takes a relatively insecure value, such as a password, and uses mathematical techniques
+        to strengthen it, making it harder to crack.
+    
+    - Two techniques:-
+        a) Salting
+           - adds a value to the encryption key to make it more complex
+
+        b) Hashing 
+           - adds time to the verification process by requiring more math
+
+    - Verifying one key is fast, but guessing millions of keys is slow.
+
+    - PBKDF2
+        - Password-Based Key Derivation Function v2
+        - Uses salting and hashing to stretch a key
+        - should be used at least 4000 times
+
+    - bcrypt
+        - key stretching with blowfish
+        
+
+e. Hardware security modules
+
+    - cryptography requires significant computing power.
+
+    - Hardware Security Modules (HSMs)
+        - Manage encryption keys and perform cryptographic operations.
+
+    - FIPS 140-2
+        - Security Requirements for Cryptographic Modules
+
+    - FIPS 140-2 Security levels
+
+    level               | Controls
+    Security level 1    | Standard operating system, no physical security
+    Security level 2    | EAL2 software and firmware, tamper-evident seals
+    Security level 3    | EAL3 software and firmware, tamper-resistant controls
+    Security level 4    | EAL4 software and firmware, strict physical security 
+
+
+===========================================================================================
+
+11. Public key infrastructure
 
 ==========================================================================================
 
-8. Symmetric Cryptography
+a. Trust models
 
-========================================================================================
+    - Requirements for key exchange
+        - The two parties must be confident that they are really communicating with each
+            other and that neither one is an imposter.
+        - The two parties must be confident that nobody is eavesdropping on the key exchange.
+        
+    - Asymmetric cryptography
+        - Users don't need to chare their private keys
+        - users can (and should) share their public keys freely.
+        - Eavesdropping protection isn't needed during key exchange.
+        - we still need to prevent imposters.
+
+    - Trust models
+        - Personal knowledge
+        - Web of trust (WOT)
+        - public key infrastructure (PKI)
+
+    - Web of Trust
+        - Relies on indirect relationships
+        - participants digitally sign the public keys of people they know personally.
+     
+    - Web of Trust issue
+        - Decentralized approach
+        - high barrier to entry
+        - requires technical knowledge
+
+    - PKI builds upon the web of trust.
+        
+
+b. PKI and digital certificates
+
+    - The public key infrastructure (PKI) depends upon highly trusted certificate authorities (CAs).
+
+    - Anyone trying to use your digital certificate illegitimately won't have your private key.
+
+
+c. Hash function
+
+    - One-way functions that transform a variable length input into a unique, fixed-length output.
+
+    - hash function characteristics
+        - one-way functions can't be reversed
+        - The output of a hash function will always be the same length, regardless of the 
+            input size.
+        - No two inputs to a hash function should produce the same output.
+        
+    - hash functions may fail
+        - if they are reversible
+        - if they are not collision resistant
+    
+    - Message Digest 5 (MD5)
+        - Ron Rivest created MD5 in 1991
+        - MD5 is the fifth in a series of hash functions
+        - message digest is another term for hash
+        - MD5 produces 128-bit hashes
+        - MD5 is no longer secure
+     
+    - NIST created the Secure Hash Algorithm (SHA) family as a government standard.
+
+    - SHA-1
+        - produces a 160-bit hash value
+        - contains security flaws that render it insecure
+     
+    - SHA-2
+        - consists of a family of six hash functions
+        - produces output of 224, 256, 384, and 512 bits
+        - uses a mathematically similar approach to SHA-1 and MD5
+    
+    - SHA-3
+        - Designed to replace SHA-2
+        - uses a completely different hash generation approach than SHA-2
+        - produces hashes of user-selected fixed length
+     
+    - RIPEMD
+        - created as an alternative to government-sponsored hash function
+        - produces 128, 160, 256, and 320-bit hashes
+        - contains flaws in the 128-bit version
+
+    - HMAC
+        - hash-based message authentication code
+        - combines symmetric cryptography and hashing
+        - provides authentication and integrity
+        - create and verify message authentication code by using a secret key in conjuction
+            with a hash function.
+
+    - Hash functions are used with asymmetric cryptography for digital signatures and 
+        digital certificates.
+    
+
+d. Digital signature
+
+    - Digital signatures use asymmetric cryptography to achieve integrity, authentication,
+        and non-repudiation.
+
+    - Signed message recipients know
+        - the owner of the public key is the person who signed the message
+        - the message was not altered after being signed.
+        - the recipient can prove these facts to the third party.
+
+    - Digital signature depend upon
+        - collision-resistant hash functions
+        - asymmetric cryptography
+        
+    - Use your provate key to create digital signatures.
+
+    - Digitally signing messages does not provide confidentiality.
+
+e. Digital signature standard
+
+    - Approved DSS Algorithms
+        - Digital Signature Algorithm (DSA)
+        - Rivest-Shamir-Adelman (RSA)
+        - Elliptic Curve Digital Signature Algorithm (ECDSA)
+        
+
+f. Create a digital certiificate
+
+    - Digital certificates follow the X.509 standard.
+
+    - Digital certifcates include common certificate attributes:-
+        - public key
+        - expiration date
+        - common name attribute
+    
+    - Certificates allow the inclusion of Subject Alternative Names (SANs).
+
+  
+g. Revoke a digital certificate
+
+    - Certifiacte revocation
+        - invalidates compromised certificates
+    
+    - Certificate Revocation List (CRL)
+        - Includes serial numbers of revoked certificates
+    
+    - Online Certificate Status Protocol (OCSP)
+        - provides real-time ceritificate status verification
+
+    - Modern browsers use OCSP, with the exception of Google Chrome, which has its own
+        certificate verification technology.
+
+
+h. Certificate stapling
+
+    - OCSP places a significant burdern on the OCSP servers operated by certificate authorities (CAs).
+    
+    - Certificate Stapling
+        - Reduces the CA's burden
+
+    - Stapled certificates are often valid for 24 hours.
+
+i. Certificate authorities
+
+    - Obtaiing a Digital Certificate
+
+    - CAs charge fees for their services when creating a new certificate.
+
+    - Self-Signed Certificates
+        - Issued by an internal CA
+    
+    - Certificate chaining allows the use of intermediate CAs.
+
+    - Offline CAs
+        - protect sensitive root keys
+    
+
+j. Certificate subjects
+
+    - Certificate Subject
+        - owner of the public key
+
+    - object identifiers
+
+***** EXAM TIPS ***************
+    - You may find exam questions that discuss certificate object identifiers (OIDs).
+*******************************
+
+    - subjects:-
+        - Servers - web, SSH, file, email, etc.
+        - devices - SANs, routers, switches, VPNs, access points, etc.
+        - Individuals - names, email address.
+        - Developers - for coding signing.
+
+    - certificate pinning
+        - Ties a certificate to a subject for a period of time.
+
+k. Certificate types
+
+    - Root certificates
+        - Protect CA private keys
+
+    - Wildcard Certificates
+        - Cover and entire domain
+        - *.linkedin.com
+
+    - Wildcard certificates are commonly used for load balancers.
+
+    - CAs issuing certifictes are vouching for the certificate subject's identity.
+        - Domain Validation (lowest level of trust)
+            - Verifies domain ownership 
+
+        - Organization Validation
+            - Verifies business name
+
+        - Extended Validation
+            - Requires extensive investigation
+
+
+l. Certificate formats
+
+    - Certificates come in different formats.
+
+    - Distinguished Encoding Rules (DER)
+        - Binary format
+        - Use DER, CRT, and CER file extensions.
+        
+    - PEM certificates
+        - Name comes from outdated Privacy Enhanced Mail (PEM) standard
+        - ASCII text equivalent of DER certificates.
+        - convert with OpenSSL
+        - use PEM and CRT extensions.
+        
+****** EXAM TIPS **********
+    - CRT files may be either DER binary certificates or PEM text certificates.
+*****************************
+
+    - Personal Information Exchange (PFX)
+        - Binary format
+        - Commonly used by Windows systems
+        - Use PFX and P12 file extensions
+        
+    - P7B Format
+        - ASCII text equivalent of PFX certificates
+        - Commonly used by Windows systems
+        - Use P7B file extension
+
+    - Certificate Formats ***************** IMP for exam *************
+
+binary ver | binary file ext    | text version | text file ext |
+DER        | .der, .crt, .cer   |    PEM       |    .pem, .crt |
+PFX        | .pfx, .p12         |   P&B        |    .p7b       |
+
+**********************  ^^^^^^^^ know the format ^^^^^ ********************
+
+==============================================================================================
+
+12. Cryptanalytic Attack
+
+=============================================================================================
+
+a. Brute force attack
+
+    -
+
+b. Knowledge-based attacks
+
+    -
+
+c. Eavesdropping attacks
+
+    -
+
+d. Implementation attacks
+
+    -
+
+e. Limitations of encryption algorithms
+
+    -
+
+f. Ransomware
+
+    -
+
+
+=============================================================================================
+
+
 
 
 
