@@ -409,7 +409,7 @@ b. Firewalls
     - Next-generation firewalls (NGFWs) incorporate contextual information into their
         decision-making.
 
-    - Other Firewall roles
+    - Other Firewall roles ************ IMP for exam ****************
         - NAT gateway
         - Content/URL filtering
         - Web application firewall
@@ -423,32 +423,184 @@ b. Firewalls
 
 c. Proxy servers
 
-    -
+    - Proxy servers connect to website on a user's behalf.
+    
+    - conection proxying
+        - proxy server sits between user and web server.
+
+    - proxy server benefits ********** IMP for exam *************
+        - anonymization
+        - performance boosting
+        - content filtering
+    
+    - forward proxies
+        - work on behalf of clients
+    
+    - reverse proxies
+        - work on behalf of servers
+
+    - transparent proxies
+        - work without the client's or server's knowledge
+
+    - Proxies can handle many applications, not jsut web traffic.
+
 
 d. Load balancer
 
-    -
+    - Load balancers distribute work among servers
 
+    - Autoscaling
+        - automatically adds and removes servers, as needed
+
+    - Load balancer seucrity functions ************* IMP for exam********
+        - ssl certificate mangement
+        - url filtering
+        - other web applictions seucirity tasks
+
+    - Round-Robin Scheduling
+        - Each server gets an equal number of requests.
+
+    - Advanced scheduling algorithms choose servers based upon performance and 
+            available capacity.
+
+    - Session persistence
+        - Routes an individual user's requests to the same server.
+
+    - Active-Active ********* IMP for exam********
+        - Two or more laod balancers actively handle network traffic and continue to 
+            function with diminished capacity if one device fails.
+
+    - Active-Passive ********* IMP for exam ********
+        - One load balancer handles all traffic while a second monitors activity and 
+            assumes responsibility if the primary load balancer fails.
+
+        
 e. VPNs and VPN concentrators
 
-    -
+    -VPN provide two important security functions:- ****** IMP for exam **********
+        i) Site-to-site vpns:-
+            - connect remote office to each other and headquarters
+            
+        ii) remote Access VPNs
+            - Provide remote access to corporate networks for mobile users
 
-f. Network intrusion detection and prevention
+    - VPN Endpoints
+        - firewalls
+        - routers
+        - servers
+        - VPN concentrators
 
-    -
+    - IPsec (Internet Protocal security)
+        - Works at the network layer 3
+        - supports the layer 2 tunneling protocol (L2TP)
+        - provides secure transport
+        - difficult to configure
+     
+    - SSL/TLS VPNs work at the application layer over TCP port 443.
 
-g. Protocol analyzers
+    - HTML5 VPNs work entirely within the web browser.
 
-    -
+    - Full-Tunnel VPN
+        - All network traffic leaving the conected device is routed through the VPN
+            tunnel, regardless of its final destination.
+
+    - Split-Tunnel VPN 
+        - Only traffic destined for the corporate network is sent through the VPN
+            tunne,. Other traffic is routed directly over the internet.
+
+******* EXAM TIPS *********
+    Spilt-tunnel VPNs provide users with a false sense of security.
+****************************
+
+    - Always on VPN
+        - connects automatically
+
+
+
+f. Network intrusion detection and prevention   **** IMP for exam *********
+
+    - Intrusion detection system (IDS) monitor network traffic for signs of amlicious 
+        activity.
+    
+    - Intrusion Detection systems
+        - alert administrators to suspicious activity
+        - require someone to monitor and take appropriate action
+
+    - Intrusion prevesion system (IPS) block malicious activity automatically.
+
+    - False positive error
+    - False negative error
+
+    - Signature Detection Systems
+        - contain databases with rules describing malicious activity
+        - alert administrators to traffic matching signatures
+        - fail to detect brandnew attacks
+        - reduce false positive rates
+
+    - Anomaly Detection System
+        - build models of "normal" activity
+        - alert administrators to activity not matching the model
+        - detect previously unknown attacks
+        - increased false positive rates
+
+********* EXAM TIPS *************
+    - Anomaly detection, behavior-based detection, and heuristic detection are same thing
+********************************
+
+    - IPS Deployment Modes
+        - In-band (inline) deployments
+            - Device sites in the path of network communications
+            - Device can block suspicious traffic from entering the network.
+
+        - Out-of-band (passive) deployments
+            - Device connects to a SPAN port on a switch
+            - Device can react after suspicious traffic enters the network
+
+   
+
+g. Protocol analyzers ************** IMP ************
+
+    - protocol analyzers allow deep inspection of traffic
+    
+    - Protocol analyzer uses
+        - Troubleshoot network issues
+        - investigate security incidents
+        - eavesdrop on confidential communications
+    
+    - wireshark
+
+    - tcpdump
+        - open-source command-line protocol analyzer
+    
+    - wireshark and tcpdump are both built on the libpcap library.
+
+    - tcpreplay
+        - allows editing and replaying traffic
+
+    
 
 h. Unified threat management
 
-    -
+    - Unified threat management (UTM) solutions combine multiple security function in a
+        single appliance.
+   
 
-i. Unified threat management
+i. content distribution networks
+        
+    - CDNs provide scalability and security.
 
-    -
+****** EXAM TIPS*******
+    - Content deliver networks and content distribution networks are the same thing.
+****************************
 
-j. Content distribution networks
+    - Adding web capacity
 
-    - 
+    - ondemand scaling
+    - cost efficiency
+    - locality of content
+    
+    - CDNs can filter out distributed denail-of-service (DDoS) attacks.
+    
+    - CDNs can provide web application firewall (WAF) functionality.
+
+
