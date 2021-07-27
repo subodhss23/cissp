@@ -808,21 +808,157 @@ g. Network monitoring
 
     - SIEMs facilitate rapid analysis.
 
-    - 
 
 h. SNMP
 
-    -
+    - SNMP automates routine network routine network monitoring and management tasks.
+
+    - SNMP Components
+      - agents intalled in every devices
+          
+    - SNMP Requests
+        - GetRequest
+        - Response
+   
+     - SNMP Configuration
+        - SetRequest
+        - Response
+
+    - SNMP Traps
+       
+***** EXAM TIPS ***************
+    - USE SNMPv3. 
+        Earlier versions have critical security flaws.
+**********************************
+
 
 i. Isolating sensitive systems
 
-    -
+    - Network segementation
+        - Separates systems of differing security levels
+
+    - Particularly sensitive servers may be placed in their own isolation security zone.
+
+    - Jump boxes
+        - Allow administrative connctions between zones.
+
+**** EXAM TIPS *********
+    - Jump boxes, jump servers, and jump hosts are all the same thing.
+**************************
+
+    - Jump boxes must be carefully secured.
+
+
 
 j. Deception technologies
 
-    -
+    - Deception technologies foold intruders.
+    
+    - Darknets
+        - Unused but monitored IP address space.
+    
+    - Honeyfiles
+        - False stores of sensative information
+
+    - Honeypots
+        - Systems designed to attract and trap attackers
+
+    - Honeynets 
+        - Large-scale deployments of honeypots
+
+    - DNS Sinkhole
+        - Altered DNS records to reroute botnet traffic
+
+    - DNS sinkholes are self-inflicted DNS poisoning attacks.
+
+
 
 k. Network support
 
+    - Use redundant power supplies.
+
+    - Understand the response time in your support contracts.
+
+    - Support contracts provide access to critical security udpates.
+
+    - Warranties provide repair and replacement of defective equipment.
+
+
+=============================================================================================
+
+5. Specialized Networking
+
+===========================================================================================
+
+a. Telephony
+
+    - coveraged networks carry voice and data communications.
+
+    - Voice over Internet protocol (VoIP)
+        - carries voice communications over data networks.
+
+
+b. Multimedia collaboration
+
     -
+
+c. Storage networks
+
+    -
+
+
+==============================================================================================
+
+6. Transport Encryption
+
+============================================================================================
+
+a. TLS and SSL
+
+    -
+
+b. IPsec
+
+    -
+
+c. Remote network access
+
+    -
+
+d. Securing commong protocols
+
+    -
+
+
+=============================================================================================
+
+7. Wireless Networking
+
+============================================================================================
+
+a. Undertanding wireless networking
+
+    -
+
+b. Wireless encryption
+
+    -
+
+c. Wireless authentication
+
+    -
+
+d. Wireless signal propagation
+
+    -
+
+e. Wireless network equipment
+
+    -
+
+==============================================================================================
+
+8. Mobile Device Security
+
+=============================================================================================
 
