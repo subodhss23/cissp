@@ -1,0 +1,454 @@
+
+
+
+=======================================================
+
+1 TCP/IP Networking
+
+=======================================================
+
+a. Introducing TCP/IP
+
+    - The TCP/IP protocol suite is at the heart of networking.
+
+    - Internet Protocols
+        - Route information across networks.
+        - Provide an addressing scheme
+        - Deliver packets from source to destination.
+        - Serve as a network layer protocol
+
+     i) Transmission Control Protocol (TCP)
+     ii) User Datagram Protocol (UDP)
+
+    - TCP Flag
+        - SYN: opens a connection
+        - FIN: closes a connection
+        - ACK: acknowledges a SYN or FIN
+
+    - TCP handshake
+        --- SYN -->>
+        <<--- SYN/ACK ------
+        ---- ACK ------->
+
+    - UDP
+        - Is a lightweight, connectionless protocol.
+        - Doesn't send acknowledgements or guarantee delivery
+        - Is used for voice and video applications
+
+    - OSI model
+        
+        - Application layer         ->> user programs
+        - Presentation layer        ->> Data translation and encryption
+        - Session layer             ->> Exchanges between systems
+        - Transport layer           ->> TCP and UDP
+        - Network layer             ->> Internet protocol (IP)
+        - Data link layer           ->> Data transfers between two nodes
+        - Physical layer            ->> Wires, radios, and optics
+
+    - TCP model                             OSI model
+        - application layer             - application, presentation, session layer
+        - tranport layer                - transport layer
+        - internet layer                - internet layer
+        - network interface layer       - data, physical layer
+
+****** EXAM TIPS *********
+    - know the seven layers of the OSI model
+        and the four layers of the TCP model
+**********************************
+    
+b. IP address and DHCP
+
+    - IP address
+        - uniquely identify systems
+        - dotted quad notation
+            - 192.168.0.1
+        
+        - the range 0-255
+        - 8-bit binary numbers
+        - 2^8 = 256 possible values
+        - range: 0-255 (256 values)
+
+        - Uniquely identify systems on a network
+        - must not be reused on internet-connected systems
+        - may be reused if on private networks
+        
+    - Subnets
+        - 192.168.1.100
+        -network | Host
+          address| address
+        - can be differnet than this
+    
+    - IPv6
+        - replaces IPv4 due to address exhaustion
+        - uses 128 bits
+        - consists of eight groups of four hexadecimal numbers
+        - example: fd02:24c1:b942:01f3:ead2:123a:c3d2:cf2f
+
+    - Static IPs
+        - Static IPs are manually assigned to systems by an administrator. They must be unique
+             and within the appropriate range for the network.
+
+    - DHCP
+        - The Dynamic Host Configuration Protocol (DHCP) allows the automatic assignment of IP
+            address from an administrator-configured pool.
+
+    
+c. DNS
+
+    - DNS provides address resolution on the internet.
+
+    - DNS Servers
+        - translate between domain names and IP addresses
+
+    - DNS functions over UDP port 53.
+        
+    - DNS resolution
+    
+    - DNS is a hierarchical system.
+        - organizations designate servers that are authoritative for their domains.
+
+    - Some content filters alert DNS query result.
+
+    - DNSSEC
+        - Adds digital signatures to DNS
+     
+
+d. Network ports
+
+    - Network ports, like apartment numbers, guide traffic to the correct final destination.
+
+    - Network port Numbers
+        - 16-bit binary numbers
+        - 216 or 65,536 possible values
+        - start counting at 0
+        - allowable range of 0-65,535
+
+    - Port ranges
+        - 0-1, 023: well-known ports
+        - 1,024-49,151: registered ports
+        - 49,152-65,535: dynamic ports
+ 
+***** EXAM TIPS ******************
+    - Memorize the list of common ports before taking the exam.
+***********************************
+
+    - Administrative Services
+        - port 21: File Transfer Protocol (FTP)
+        - port 22: Secure Shell(SSH)
+        - port 3389: Remote Desktop Protocol (RDP)
+        - Ports 137, 138, and 139: NetBIOS
+        - Port 53: Domain Name Service (DNS)
+        
+    - Mail services
+        - port 25: Simple mail transfer protocol (SMTP)
+        - port 110: post office protocol (POP)
+        - port 143: intenet message access protocol(IMAP)
+        - port 139: for email
+
+    - Web services
+        - port 80: Hypertext transfer protocol (HTTP)
+        - port 443: secure HTTP (HTTPS)
+
+
+e. ICMP
+
+    - The internet control message protocol (ICMP) is the housekeeping protocol of the internet.
+
+    - Ping
+        - identifies live systems
+
+    - Traceroute
+        - Identifies network paths
+
+    - Other ICMP functions
+        - destination unreachable
+        - redirects
+        - time exceeded
+        - addresses mask requests and replies
+
+       
+f. Multilayer protocols
+
+    - TCP/IP is the most common multilayer protocol suite.
+
+    - Distributed Network Protocol (DNP3)
+        - Provides network connectivity for SCADA systems.
+    
+    - DNP3 at work
+        
+
+========================================================================
+
+2. Security Network Design
+
+========================================================================
+
+a. Public and private addressing
+
+    - public ip address
+        - assigned by a central authority and are routable over the internet
+        - manage by ICANN
+        - ICANN distributes large blocks of addresses to regional authorities for distribution.
+
+    - private ip address
+        - available for anyone's use but not routable over the internet
+        
+        - 10.0.0.1 - 10.255.255.255
+        - 172.16.0.1 - 172.31.255.255
+        - 192.168.0.1 - 192.168.255.255
+
+        - private IP addresses are not intenet routable
+
+    - Organizaitons mix public and private addresses
+
+    - Network addresss translation
+        - translates between public/private addresses
+
+    - Network Address Translation (NAT)
+        
+    - NAT and security
+        - hides internal addresses from internet systems
+        - limits direct access to systems
+        - makes it difficult to identify the true origin of traffic
+        
+    - Port Address Translations (PAT)
+        - Allows multiple systems to share the same public address
+        - Assigns unique ports to each communication
+
+
+b. Subnetting
+
+    - subdivides large neworks
+    
+    - Subnets
+        
+    - subnet masks
+        - identify the dividing line between network and host addresses
+
+    - Binary representation
+
+    - subnet mask notation and slash notation
+
+
+c. Security zones
+
+    - Firewalls segment networks into seucrity zones to protect systems of differing security levels.
+
+    - Network border firewall
+    
+    - zero trust
+        - system gains no trust based solely upon network location.
+    
+    - Extranet
+        - Intranet segments extended to business partners
+    
+    - Honeynet
+        - Decoy networks designed to attract attackers
+
+    - Ad Hoc Network
+        - Temporary networks that may bypass security controls
+    
+    - East-West Traffic  ******** IMP FOR EXAM ***********
+        - Network traffic between systems located in the data center
+
+    - North-South Traffic ******* IMP FOR EXAM ***********
+        - Network traffic between systems in the data center and systems on the internet
+
+
+d. VLANs and network segmentation
+
+    - VLANs
+        - Virtual LANs (VLANs) separate systems on a network into logical groups based upon 
+            function, regardless of physical location.
+        - VLANs extend the broadcast domain.
+        
+    - configuring VLANS
+        - Enable VLAN trunking
+        - Assign switchports to VLANs
+
+
+e. Security device placement
+
+    - security devices must be properly placed within a network.
+    
+    - Network traffic collectors
+        - Intrusion detection and prevention sensors
+        - network taps
+        - port mirrors
+        
+     - Security information and event management
+        - gather information using collectors
+        - analyze information with a centralized aggerations and correlation engine
+        - place collectors near the systems generating records
+        - place the correlation engine in a secure location
+    
+    - Proxy servers and content filters typically belong in the DMZ.
+
+    - VPN concentrators
+        - Aggregate remote user connections
+        - often reside in their own VLAN, where access controls may restrict remote user
+            activity.
+        - Sophisticated designs may use multiple VLANs for different user roles
+     
+    - SSL Accelerators
+        - handle the difficult cryptographic work of setting up TLS connection
+
+    - Load Balancers
+        - distribute connection requests among multiple servers
+
+    - SSL accelerators and load balancers belong in the DMZ.
+
+    - DDoS Mitigation Tools
+        - Belong as close to the internet as possible
+
+    - Purchasing DDoSmitigation services from your ISP is an ideal approach.
+
+        
+
+f. Software-defined network (SDN)
+
+    - Software-deifined networking treats network functionality and implementation detail
+        separately.
+
+    - Reconfiguring traditional networks requires reconfiguring devices.
+
+    - Control Plane
+        - Responsible for making routing and switcing descisions
+    
+    - Data Plane
+        - Responsible for carrying out the instruction of the control plane
+
+    - Software-defined networking (SDN) separates the control plane from the data plane.
+
+    - SDN makes the network programmable.
+    
+    - Encapulation allows one protocol to carry traffic that uses another protocol.
+
+    - VXLAN builds overlay networks that operate at Layer 2 using Layer 3 equipment.
+
+    - Software-defined wide area networks (SD-WAN) connect larger areas.
+
+    - SDN Security Benefits
+        - Allow granular network configuration
+        - Facilitate faster response to security incidents
+    
+    - SDN increases network complexity.
+
+
+g. Transmission media
+
+    - Layered approaches to networking allow us to abstract the physical layer.
+
+    - Tranmission media allows digital information to be sent over a distance.
+
+    - Ethernet cables transmit electricity over copper wires.
+
+    - Fiber-optic cables transmit light over strands of glass.
+
+    - Wi-Fi communications use radio waves instead of physical media.
+
+    - protect against eavesdropping through the use of encryption.
+
+
+
+====================================================================================
+
+3. Network security devices
+
+======================================================================================
+
+a. Routers, switches, and bridges
+
+    - Switches 
+        - connect devices to the network.
+        - reside in wiring closets and connect the computer in a building together.
+        - ethernet jacks are at the other end of network cables connected to switches.
+        - Wireless access points (WAPs) connect to switches and create Wi-Fi networks
+        - Switches typically work at layer 2 (MAC address only)
+        - some switches may function at layer 2 (network layer)
+    
+    - routers
+        - router connect networks to each other, making intelligent packet routing decisions.
+
+    - bridges connect networks using simple forwarding.
+
+
+b. Firewalls
+
+    - Firewall serve as the security guards at the perimeter of a network.
+    - Firewall often connects three networks
+        - internal network
+        - intenet
+        - DMZ
+
+    - Demilitarized Zone (DMZ)
+        - Contains systems that must accept direct external connections
+        - Isolates those systems due to risk to compromise
+        - Protects internal network from compromised DMZ systems
+
+    - Stateless Firewalls
+        - Evaluate each connection independently
+    
+    - Stateful inspection
+        - tracks open connections
+
+    - Firewall rule contents
+        - Source system address
+        - Destination system address
+        - Destination port and protocol
+        - Action (allow or deny)
+
+    - Impllict Deny
+        - If the firewall receives traffic not explicitly allowed by a firewall rule, 
+            then that traffic must be blocked.
+
+******* EXAM TIPS ********
+    - You need to understand default/implicit deny principle of firewalls.
+********************************
+
+    - Next-generation firewalls (NGFWs) incorporate contextual information into their
+        decision-making.
+
+    - Other Firewall roles
+        - NAT gateway
+        - Content/URL filtering
+        - Web application firewall
+
+    - Firewall Deployment options
+        - network hardware vs. host-based software firewalls
+        - open source vs. proprietary
+        - hardware appliance vs. virtual appliance
+
+    
+
+c. Proxy servers
+
+    -
+
+d. Load balancer
+
+    -
+
+e. VPNs and VPN concentrators
+
+    -
+
+f. Network intrusion detection and prevention
+
+    -
+
+g. Protocol analyzers
+
+    -
+
+h. Unified threat management
+
+    -
+
+i. Unified threat management
+
+    -
+
+j. Content distribution networks
+
+    - 

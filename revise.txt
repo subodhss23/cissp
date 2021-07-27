@@ -3,5 +3,6 @@
 3. Encryptions/cryptography
 4. fire extinguishers
 5. Threat modeling
-6. 
+6. OSI and TCP model 
+7. Subnet mask notion and slash notion
  
