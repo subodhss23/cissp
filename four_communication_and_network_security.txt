@@ -897,14 +897,45 @@ a. Telephony
     - Voice over Internet protocol (VoIP)
         - carries voice communications over data networks.
 
+    - VoIP VLAN Segmentation
+        
 
 b. Multimedia collaboration
 
-    -
+    - Instant messanger
+   
+    - Extensible Messaging and Presence Protocol (XMPP)
+        - XMPP provides an open-source, standards-based alternative to proprietary
+            messaging protocols. It was originally known as Jabber.
+
+    - Video conferencing.
+
+    - Access controls restrict participation to authorized individuals.
+     
 
 c. Storage networks
 
-    -
+    - Two types:-
+        i) Network-Attached Storage (NAS)
+            - Simple, self-contained storage devices that commonly use CIFS and NFS
+
+        ii) Storage Area Networks (SAN)
+            - Complex, massive storage systems that require dedicated networks.
+
+    - SANs vs. NAS
+        - SANs present raw storage to devices, rather than file systems.
+        - SANs are connected to devices over dedicated networks.
+
+    - Fiber Channel
+        - uses direct fiber-optic connections between SAN and devices.
+
+    - FC over Ethernet
+        - Replaces fiber-optic cables with Ethernet links
+
+    - iSCSI
+        - Runs the SCSI standard over network connections
+
+    - Storage traffic should run on a dedicated infrastructure or VLANs.
 
 
 ==============================================================================================
