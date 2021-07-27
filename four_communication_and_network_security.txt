@@ -604,3 +604,225 @@ i. content distribution networks
     - CDNs can provide web application firewall (WAF) functionality.
 
 
+=============================================================================================
+
+4. Network Security Techniques
+
+============================================================================================
+
+a. Restricting network access
+
+    - Permeter security
+        - Keep unwanted remote users out of the network entirely through the use of firewall
+            and other controls.
+
+    - Network access control
+        - Limit physical network accedss to authorized individuals and devices.
+
+    - To enforce security policies, we must be able to express them in technical terms.
+
+        i) Rule based
+            - Restrict access based upon business logic.
+
+        ii) Role based
+            - Restrict access based upon the identity of an individual
+
+        iii) Time based
+            - restrict access based upon the time of day.
+
+        iv) Location based
+            - Restrict access based upon physical location.
+
+
+b. Network access control
+
+    - NAC intercepts network traffic coming from unknown devices and verifies that the system
+        and user are authorized before allowing further communication.
+
+    - NAC uses 802.1x authentication.
+
+    - NAC roles
+        - user and device authentication
+        - role-based access
+        - posture checking
+
+    - Devices failing posture checks go into a quarantine VLAN.
+
+    - NAC Implementations
+        - Agent based
+        - Agentless
+        - Inline
+        - out of band
+
+
+c. Firewall rule management
+
+    - Firewall block undesirable network access attempts.
+
+    - Firewall admins must watch for rule configuration errors.
+        - Shadowed rules
+        - Promiscuous rules
+        - Orphaned rules
+
+
+
+d. Router configuration security
+
+    - Routers perform basic filtering which can reduce the load on firewall.
+    
+**** EXAM TIPS ******
+    - You won't need to know the syntax of router access control list commands.
+************************
+
+    - Router access control lists
+        - Ristrict network traffic
+    
+    - Standard access control lists
+        -perform filtering based upon source IP address
+
+        - access-list[number]  [permit/deny][source][mask]
+        - access-list 1         deny        10.3.1.00.0.0.255
+    
+        
+    - Extended ACLs
+        - Block traffic based upon more advanced criteria such as source and
+        destination IP addresses, source and destination ports, and the 
+        protocols used for a communication.
+
+    - Firewall vs Routers
+        - Firewall are purpose specific and efficient
+        - Firewall are advanced rule capabilites
+        - Firewall often advanced seucrity functionality.
+
+    - Placing ACLs on routers reduces the burden on firewalls.
+
+    - Quality of service (QoS) controls prioritize critical network traffic.
+
+
+
+e. Switch confiugration security
+
+    - Maintain the physical security of the switches and other network gear.
+
+    - An attacker who gains physical access to your switch controls that
+        portion of the network.
+
+    - VLAN Security
+        - Disable automatic trunk negotiation to prevent VLAN hopping attack
+
+    i) VLAN Pruning
+        - Limit the unnecessary exposure of VLANs by limiting the number of
+            switches where they are trunked, especially for sensastive VLANS.
+
+    ii) VLAN Trunk Negotitation
+        - Deny the use of automatic VLAN trunk negotiation to limit the 
+            effectiveness of VLAN hopping attacks.
+
+    iii) Port security
+        - Limit the devices that may connect to a network switchport by 
+            MAC address.
+
+            - Static port security
+                - Administrators manually configure valid MAC addresses for each port.
+
+            - Dynamic port security
+                - Switches memorize the first MAC address they see on each
+                    port and limit access to that address.
+
+     iv) DHCP Snooping
+        - Blcoks malicious DHCP traffic
+
+    
+
+f. Maintaining network availability
+
+    - Maintaining network availability is a crucial security goal.
+
+    i) Flooding attacks
+        - overwhelm network devices
+
+    - SYN Floods
+        - Fill connection state tables on firewalls with half-open connection entries.
+
+    - MAC Floods
+        - Fill switch's MAC address table with many entries, causing it to flood traffic
+             on all ports
+
+    - Port security is also effective against MAC flooding.
+
+    ii) Routing Loops
+    
+        - allow broadcast stroms
+        
+        - Spanning Tree Protocol (STP)
+            - Prevents broadcast stroms by implementing loop prevention.
+
+        - BDPU Guard
+            - Blocks malicious STP updates
+
+
+
+g. Network monitoring
+
+    - Firewall and network logs offer a rich source of security information.
+
+    - Firewall log details
+        - Details about attempted connections
+        - Timestamps
+        - Relevant firewall rule
+        
+    - Firewall log uses examples:-
+        - Security incident investigation
+        - Network issue troubleshooting
+        - Anomalous activity detection
+
+    - Ingress Filtering
+        - watches for traffic entering the network
+
+    - Egress filtering
+        - watches for traffic leaving the network
+    
+    - Full packet capture requires large storage capacity.
+
+    - Network Flow Data
+        - Captures connection details
+
+    - NetFlow Records Capture
+        - Source and destination systems
+        - Source and desitiation ports
+        - Timestamps
+        - Amount of data transferred
+
+    - NetFlow data is quite useful
+        - It doesn't capture what was communicated but does identify who, when, and how much.
+
+    - Security Information and Event Management (SIEM)
+        - Network security systems that automates the collection and analysis of logs from
+            many different systems for security purposes.
+
+    - SIEM Log Sources
+        - Firewalls
+        - Network devices
+        - Servers
+        - Applications
+
+    - SIEMs facilitate rapid analysis.
+
+    - 
+
+h. SNMP
+
+    -
+
+i. Isolating sensitive systems
+
+    -
+
+j. Deception technologies
+
+    -
+
+k. Network support
+
+    -
+
