@@ -946,19 +946,86 @@ c. Storage networks
 
 a. TLS and SSL
 
-    -
+    - TLS encrypts network communications
+
+**** EXAM TIPS ********
+    - TLS depends upon pairing of encryption and hash functions known as cipher suites.
+***********************
+
+*********************
+    - Session keys are also known as ephemeral keys.
+********************
+
+    - SSL insecure predecessor to TLS
+
+    - OpenSSL opne-source TLS project
+
+    - SSL Inspection
+        - performs a "friendly" man-in-the-middle attack to inspect network traffic.
+
+    
 
 b. IPsec
 
-    -
+    - Internet protocol security
+
+    - IPsec secures the entire packet payload.
+
+    - Encapsulating Security Payload (ESP)
+        - provides confidentiality and integrity protection for packet payloads
+
+    - Authentication Header (AH)
+        - Provides integrity protection for packet headers and payloads
+
+    - You can combine ESP and AH
+
+    - Security Association (SA)
+        - Identifies cryptographic algorithms
+    
+    - Site-to-Site VPNs
+        - Encrypted tunnels connecting two networks together in a manner that is 
+            transparent to users
+        - Tunnel mode
+
+    - End-User VPNs
+        - Provide encrypted remote network access for individual systems
+        - Transport mode
+
+
 
 c. Remote network access
 
-    -
+    - VPNs provide remote network access.
+
+    _ Remote shell
+    
+    - Remote desktop
+
+    - Old systems used telenet for remote access without encryption.
+
+    - SSH 
+
+    - Window provide RDP with encryption desktop access.
+
+    
 
 d. Securing commong protocols
 
-    -
+    - HTTPS adds TLS to web browsing
+    
+    - File transfer
+        - FTP is insecure but can be secure with ssh
+
+***** EXAM TIPS ********
+    - The Trivial File Transfer Protocol (TFTP) is rarely used and is not secure.
+***************************
+
+    - Network Time Protocol
+        - Synchronizes system clocks
+
+    - LDAPs offers a secure alternate to LDAP.
+
+    
 
 
 =============================================================================================
@@ -969,23 +1036,309 @@ d. Securing commong protocols
 
 a. Undertanding wireless networking
 
-    -
+    - wifi
+
+    - wifi standards
+        - 802.11
+
+****** EXAM TIPS *********
+    -Wi-Fi signals travel over open airwaves and are subject to undetectable interception.
+*************************
 
 b. Wireless encryption
 
-    -
+    - Wired Equivalent Privacy (WEP)
+        - original wireless encryption standard.
+        - contains serious security vulnerabilities
+        - no longer considered secure
+        
+
+    - Wifi protected access (WPA)
+        - Replaced WEP in 2003
+        - Uses the Temporal Key Integrity Protocal (TKIP) to rapidly rotate encryption keys
+        - contains vulnerabilities
+        - no longer considered secure
+     
+    - Wifi protected access v2 (WPA2)
+        - Released in 2004 as upgrade to WPA
+        - Encrypts packets using AES encryption
+        - Uses the CCM protocol
+        - Contains some petential security issues
+        - Widely used and considered secure
+
+    - Wifi Protocted Access v3 (WPA3)
+        - Required on new wifi devices from 2020 onward
+        - supports CCMP
+        - Uses Simultaneous Authentication of Equal (SAE) for key exchange.
+
+    
 
 c. Wireless authentication
 
-    -
+    - Three ways to authenticate:-
+
+        i) pre-shared keys
+        ii) enterprise authentication
+            - individual credentials
+            - EAP
+***** EXAM TIPS*******
+    - know the variation of EAP
+***************************
+
+        iii) captive portal redirect users to an authorization page
 
 d. Wireless signal propagation
 
-    -
+    - Omnidirectional antennas send a signal in all directions.
+
+    - Directional antennas direct all of the power from an access point in a single
+        direction.
+
+    - 802.11ac Beamforming Technology
+
 
 e. Wireless network equipment
 
+    - Fat access points
+        - contain all of the hardware and software needed to operate a wireless network
+
+    - Thin Access Points
+        - Rely upon wireless controllers for configuration and to serve as the "brain"
+            of the wireless network.
+
+    
+========================================================================================
+
+8. Mobile Device security
+
+=======================================================================================
+
+    - Cellular networks
+        - covers distance of 20-plus miles
+        
+    - Point-to-multipoint
+        - connects a single base station to many clients
+
+    - Point-to-point
+        - connects two fixed-base stations to each other.
+
+    - Satellite communication
+
+    -Near-field communcation (NFC) like applepay.
+
+    - mobile device security
+
+        - passcode
+        - biometric
+        
+        - full device encryption
+
+        - remote wiping
+
+    c) Mobile device management
+
+    - MDM features
+        - perform device configuration mangement
+        - prevent users from modifying security settings
+        - contorl data stored on devices
+        - manage appilcation installed on device
+
+    - appilcation whitelisting
+    - application blacklisting
+    
+    - MDM solution also provide content filtering and management.
+
+    d) mobile device tracking
+    
+    - geolocation
+
+    - geofencing
+
+    e) Mobile appiclation security
+
+    -  Authentication
+
+    - Encrypt information in transit
+
+    - geotagging
+
+    f) mobile security enforcement
+
+        - third-party app stores may contain unsafe code.
+        - jail breaking phones creates added security risks.
+        - update firmware
+        
+    g) BYOD (bring your own devices)
+
+        - byod onboarding
+            - ensure the device meets security requirements and is safely configured
+        
+        - byod offboarding
+            - remove all corporate information from the persnally owned device.
+
+=======================================================================================
+
+9. Host security
+
+======================================================================================
+
+a. Operating system security
+
+    - Limit administrative access to systems.
+
+    - patch management
+        - corrects security issues
+
+    - use configuration management tools to patch operating systems and application
+
+    - system hardening
+        - locks down configurations
+
+    
+
+b. Malware prevention
+
+    - Malicious software
+
+    - four types:-
+        
+        i) Viruses
+            - spread by human action
+
+        ii) worms
+            - spread by themselves
+
+        iii) Trojan horse
+            - disguise themselves
+
+        iv) Spyware 
+            - gathers infromation
+
+    - Antimalware software protects against manay different threats.
+        i) Signature detection
+            - watches for known patters for malware activity
+
+        ii) Behavior detection
+            - Watches for deviations from normal patterns of activity
+
+    - Endpoint Detection and Response (EDR)
+        - offers real-time, advanced protection
+
+    - Sandboxing
+        - isolates malicious content
+
+    - spam filtering
+
+    - Malware logs should be sent to a centralized system for storage and analysis.
+
+
+
+c) Application management
+
+    - Application control
+        - restricts software that may run
+
+    - whitelisting
+    - blacklisting
+
+    - send application control logs to your SIEM or log repository for analysis.
+
+    - update and patching
+
+    - host software baselining
+        - identifies expected system software
+
+
+d) Host-based network security controls
+
+    - Firewalls
+        - default deny rule
+        
+    - Network firewall
+        - hardware devices that regulate connections between two networks
+
+    - host firewalls
+        - sofwre components of an operating system that limits connections to a server
+
+******** EXAM TIPS ********
+    - granting network access requires configuring both network and host firewalls.
+******************************
+
+    - Next-Generation Firewall (NGFW)
+        - incorporates advanced security features, such as contextual information about
+            the user and application.
+
+    - Intrusion Detection (IDS)
+        - alerts administrators to suspicious network activity
+
+    - Intrusion Prevention (IPS)
+        - takes proactive measures to block suspicious network activity
+
+    
+e) File integrity monitoring
+
+    - Defense-in-depth strategies require the use of diverse, overlapping security controls.
+
+    - fine integrity monintoring
+        - watch for unexpected file modifications
+
+    - hash function
+        - hash function are one-way function that transform a varible length input into a 
+            unique fixed-length output.
+
+     - File integrity monitoring systems periodically verify that the hash values of 
+        critical files have not changed.
+
+    - tuning is critical
+        - adjust the FIM system for your organization's needs.
+
+****** EXAM TIPS ******
+    - Analyzing the output of a file integrity mointoring system would make a good exam 
+        question.
+************************
+    
+
+f) data loss prevention
+
+        - organizations routinely handle sensitive information.
+
+        - Data loss prevention (DLP)
+            - Technology solutions that search systems and mointor networks for sensative
+                information that is unsecured and provide the ability to remove the
+                information, block the transmission, or encrypt the stored data
+
+        - Host-based DLP
+            - uses software agents intalled on a single system
+
+        - Netowrk-based DLP
+            - scans network transmission for sensative information
+
+        - pattern matching
+            - recognize known pattern of sensitive information such as ssn
+
+        - watermarking
+            - identifies sensative information uses electronic tags
+
+        - cloud-based DLP systems operate as managed security service.
+
+
+
+c. Application management
+
     -
+
+d. Host-based network security controls
+
+    -
+
+e. File integrity monitoring
+
+    -
+
+f. Data loss prevention
+
+
+========================================================================================
 
 ==============================================================================================
 
