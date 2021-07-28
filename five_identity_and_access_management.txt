@@ -1,0 +1,404 @@
+
+
+
+
+========================================================================================
+
+1. Identification
+
+=======================================================================================
+
+a. Identification, authenticaion, and authorization
+
+    - Identification
+        - only assertion without proof
+        - only claim, can be false claim
+        - eg username
+
+    - authentication
+        - proves identity
+        - eg password
+
+    - authorization
+        - needs to check that identified person is allowed or has permission
+        - combination of username and password has permission
+
+    - Accounting
+
+    - Identity and access management systems should work across cloud and on-permises env.
+
+    
+
+b. Usernames and access cards
+
+    - unique identifier 
+    
+    - some access card used for identification and authentication
+    
+    - Magnetic stripe cards
+    - Smart cards
+
+
+c. Biometrics
+
+    - identification and authentication
+    - more secure
+    - low false rejection and acceptance rates
+
+    - fingerprint, facical recognition, eye retina scan, voice scan
+
+
+d. Resgistration and identity proofing
+
+    - Registration process
+        - Request
+        - Approval
+        - Identity proofing
+        - Issuance
+
+    - Identity proofing steps
+        - Photo identification (multiple forms in US)
+        - fingerprinting
+        - background checks
+        - 
+
+================================================================================================
+
+- Authentication
+
+================================================================================================
+
+a. Authentication factors
+
+    - something you know
+        - password
+    - something you are
+        - fingerprint
+    - something you have
+        - physical device you have
+
+    - authenticaion attributes
+
+    - false acceptance rate
+    - false rejeciton rate
+
+    
+b. Multifactor authentication
+
+    - combination of two factor authentication
+
+
+c. Something you have
+
+    - physical tokens, fob, google authenticator, smart cards
+
+d. Password authentication protocols
+
+    - PAP password authentication protocol
+        - no encryption
+
+    - CHAP 
+        - challange handshake authentication protocol
+
+
+e. Single sign-on and federation
+
+    - Federated Identity management
+        - shared info accross system
+            - google, yahho authentication
+
+        - single sign on(SSO)
+    
+    - Trust characteristics
+        -one-way trust
+        - two-way trust
+        - transitive trust
+        - non-transitive trust
+
+
+f. RADIUS and TACACS
+
+    - RADIUS
+        Remote Access Dial-In User Service
+
+    - RADIUS for modem pools
+
+    - still used RADIUS
+
+**** EXAM TIPS ************
+    Remember that a RADIUS client is usually an application server.
+*******************************
+
+    - RADIUS uses UDP.
+    
+    - TACACS
+        - Terminal Access Control Access Control System
+
+    - TACACS+ is current one.
+
+    
+g. Kerberos and LDAP
+
+    -  Kerberos is one of the core protocols for Microsoft Active Directory.
+
+    - Ticket-based authentication system that allows users to authenticate to a centralized 
+        service and then use tickets to gain access to distributed services.
+
+    - LDAP
+        The Lightweight Directory Access Protocol (LDAP) provides the means to query a 
+        centralized directory service, such as Microsoft Active Directory.
+
+    - TCP ports
+        - Kerberos uses port 88
+        - LDAP uses port 389
+        - Secure LDAP uses port 636
+
+    - NTLM Authentication
+        - NT LAN Manager
+        - Was widely used on Windows systems for many years
+        - Depends upon a hash-based challenge-response protocol.
+
+        - Security issue
+            - weak encryption
+            - pass the hash
+
+        
+h. SAML
+
+    - The Security Assertion Markup Language (SAML) allows signle sing-on (SSO) within a web
+        browser across a variety of systems.
+
+    - SAML Authentication
+        - Principal
+        - identity
+        - provider
+        
+
+i. Identity as a service (IDaaS)
+
+    - IDaaS providers allow organizations to move IAM to the cloud.
+
+    - IDaaS began by providing SSO for web-based services.
+
+    - Directory Integration
+        - Synchronize with an organization's existing on-premises or cloud-based directory
+            to obtain user information.
+
+    - Application Integration
+        - Replace the authentication services for many SaaS products, simplifying the user and 
+            administrative experience.
+
+    - IDaas allows the use of multifactor authentication.
+
+    - Considering IDaaS
+        - Verify the product satisfies the organization's business requirements for identity 
+            and access maangement
+        - Conduct a thorough security review of the product under consideration.
+
+    
+j. OAuth and OpenID Connect
+
+    - oauth and openid connetc users
+        - linkedin, google, facebook, github
+
+    - OAuth is an authorization protocol.
+
+    - OpenID Connect is an authentication protocol.
+
+    
+k. Certificate-based authentication
+
+    - Certificates contain a signed copy of a public key.
+
+    - Key-based authentication
+        - eg:- ssh 
+
+
+==========================================================================================
+
+3. Accountability
+
+===========================================================================================
+
+a. Accountability
+
+    - The ability to trace every action taken on a system back to an individual user without
+        nay ambiguity and without allowing the user to deny responsibility for that action.
+
+    - Identification
+    
+    - Authentication
+    
+    - Systems must also track user activity through auditing mechanisms.
+
+    - Logs must be secure
+        - Use a centralized log server.
+    
+***** EXAM TIPS ************
+    - covered in depth in domain 7 : Security opertions.
+****************************
+ 
+
+b. Session management
+
+    - Uses time out and screen savers to disconnect user serssions that have gone idle, 
+        preventing an authorized individual from taking control of an abandoned user session.
+
+    - Timeouts
+        - disconnect user sessions after a predetermined time
+        - disconnect user sessions after a period of inactivity
+        - require re-authentication for sensative activites.
+
+    - Screensavers are a common timeout mechanism.
+
+
+
+=============================================================================================
+
+4. Account Management
+
+============================================================================================
+
+
+a. Understand account and privilege management
+
+    - Account Management Tasks
+        - implement least privilege
+        - implement separation of duties
+        - implement job rotation
+        - manage the account life cycle
+
+    - Least privilege
+        - Users should have only the minimum set of permission necessary for their job functions
+
+    - Separation of duties
+        - Sensitive functions should require action by two separate users.
+
+    - Job rotations
+        - regularly move people between jobs to prevent fraud
+
+    - Mandatory vaction 
+        - Enforce periods of time when employees have no access to systems(for audit).
+
+    - Standart naming conventions facilitate user identification.
+
+    
+
+b. Account types
+
+    - Differnt account types require different access controls.
+
+    - users account
+        - has standard permission and standard monitoring.
+
+    - privileged account
+        - has administrative rights and require strong controls
+
+    - privileged accounts should not be used for routine activites.
+
+    - Guest account
+    - shared account
+
+    - Service account
+        - provides access for internal server processes
+
+***** EXAM TIPS **********
+    -Avoid the use of shared/generic accounts and credentials.
+**************************
+
+
+c. Account Policies
+
+    - Group Policy Object (GPO)
+        - Applies configuration settings to users and computers.
+    
+
+d. Password policies
+
+    - password length and special characters.
+
+**** EXAM TIPS *********
+    - Current NIST guidance says that complex passwords should be allowed, but not required.
+**************************
+
+    - password expiration policy.
+
+*** EXAM TIPS *****
+    - Current NIST guidance says that password should not expire.
+****************************
+
+
+e. Manage roles
+
+    - 
+
+f. Account monitoring
+
+    -
+
+g. Privileged access management
+
+    -
+
+h. Provisioning and deprovisioning
+
+    -
+
+===============================================================================================
+
+5. Authorization
+
+===============================================================================================
+
+a. Understand authorization
+
+    -
+
+b. Mandatory access controls
+
+    -
+
+c. Discretionary access controls
+
+    -
+
+d. Access control lists
+
+    -
+
+e. Database access control
+
+    -
+
+f. Advanced authorization concepts
+
+    -
+
+
+================================================================================================
+
+6. Access Control Attacks
+
+===============================================================================================
+
+a. Social engineering
+
+    -
+
+b. Impersonation attacks
+
+    -
+
+c. Identity fraud and pretexting
+
+    -
+
+d. Water hole attacks
+
+    -
+
+e. Physical social engineering
+
+    -
+
+===============================================================================================         
