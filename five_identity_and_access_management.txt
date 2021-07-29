@@ -327,22 +327,85 @@ d. Password policies
     - Current NIST guidance says that password should not expire.
 ****************************
 
+    - Lockout Policies
+        - lockout accounts after many incorrect login attempts.
+    
+    - Disablement
+        - Disable unused accounts
 
+    - Password Recovery Mechanisms
+        - Allow users to reset password on a self-service basis
+        - Relieve burden on help desk
+        - Improve user satisfaction with IT
+
+    
 e. Manage roles
 
-    - 
+    - Groups permissions to allow shared security settings.
+    
+    - Windows Security Group
+        - Implements role-based security
+    
+    - Benefits of Roles
+        - roles simplify account management
+        - administrator may assign permission to new users by adding a role to the user.
+        - administrator may then remove permission for departing users by removing the role.
+
+    - Roles replace the need for shared accounts.
+ 
 
 f. Account monitoring
 
-    -
+    - Account monitoring protects against security incidents.
 
+    - Inaccurate permissions.
+        - can block work and/or violate least privilege.
+
+    - User account audits
+        - pull listing of account permissions
+        - review with managers
+        - make necessary adjustments
+        - prioritize review of users with job changes
+
+    - Attestation
+        - Formal approval of user privileges
+
+    - auauthorized use
+        - continious account monitoring
+
+    - access policy volations
+
+    -  geotagging
+        - geofancing
+    
+    
 g. Privileged access management
 
-    -
+    - password vaulting
+        - store admin passwords
+    
+    - command proxying
+        - eliminates the need for direct server access
+
+    - monitoring
+        - log admin user activity
+        
+    - credential management
+        - rotates password and access keys
+
+    - sudo
 
 h. Provisioning and deprovisioning
 
-    -
+    - Prompt termination is critical
+
+    - Routine workflow
+        - disable accounts on a scheduled basis for planned departures
+
+    - Emergency workflow
+        - Immediately suspends access when user is unexpectedly terminated
+
+    
 
 ===============================================================================================
 
