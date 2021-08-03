@@ -161,13 +161,80 @@ d. Cybersecurity exercises
 
 ============================================================================================
 
-a. Loggin security information
+a. Logging security information
 
-    -
+    - log and data structure
+        - network or netflow
+        - DNS
+        - system ( event logs)
+        - application
+        - authentication
+        - VoIP
+        - Dump files
+        - vulnerabilities scan
 
+    -Syslog
+        - provides a logging standard
+
+    - syslog message components
+        - header (timestamp, source address)
+        - facility (source of message on the sending system)
+        - severity (importance value from 0 to 7)
+        - message (details of the situation)
+
+    - syslog severity levels from 0 to 7 (0 being most critical)
+
+    - Linux supports syslog natively.
+
+    - syslog versions
+        - syslog
+        - syslog-ng
+        - rsyslog
+        - journalctl
+
+    - Tags facilitate searching, filtering, and analysis.
+
+    - NXLog centralizes the management of disparate logs.
+
+    
 b. Security information and event management
 
-    -
+    - systems generate far too many log records for manual analysis.
+
+    - SIEM has two functions:-
+        - central, secure collection point for logs
+            - all systems send log entries directly to the SIEM
+        - source of artificial intelligence
+            - SIEMs detect patters that other systems might miss
+
+    - Intrusion detection system
+        - traiggers the intial alert
+
+    - firewall logs
+        - suspicious connection
+    = web server log
+        - sql injection attack
+    - db log
+        - large query
+    - router log   
+        - large outbound data flow
+
+    - SIEM dashboards
+        - provide a centralized view of security information
+        - generate alerts for unusal activity
+        - facilitate trend analysis
+        - offer adjustable sensitivity
+
+
+    - SOAR
+        - Security Orchestration Automation Response
+        - playbooks
+            - process-focused response to security events, including both human and automated 
+                actions
+        - runbooks
+            - automated response to security events that execute immediately and aid human 
+                investigators
+
 
 ==============================================================================================
 
@@ -177,27 +244,67 @@ b. Security information and event management
 
 a. Code review
 
-    -
+    - use peer analysis to assess code.
+
+    - Fagan inspections follow a formalized, six-step code review process.
+        - planning
+        - overview
+        - preparation
+        - metting
+        - rework
+        - follow up
+
 
 b. Code tests
 
-    -
+    - use technology to inspect software.
+
+    - static test
+    - dynamic test
+
+****** EXAM TIPS *******
+    - Code reviews, static testing, and dynamic testing are complementary, rather than competitiors.
+
+************************
 
 c. Fuzz testing
 
-    -
+    - fuzzing is a software testing technique taht feeds software many different input values
+        in an attempt to cause an unpredictable state or unauthorized access.
+
+    - fuzzing testing input sources
+        - delveoper-supplied input
+        - developer-supplied script
+        - generation fuzzing
+        - mutation fuzzing
+
 
 d. Interface testing
 
-    -
+    - API defines interactions between systems
+    
 
 e. Misuse case testing
 
-    -
+    - Misuse case testing evaluates software from the attacker's prespective.
+
 
 f. Test coverage analysis
 
-    -
+    - test coverage
+        - percent of software tested
+
+    - computing test coverage
+        - test coverage = cases tested / total cases
+
+    - test coverage variables
+        - use cases
+        - functions
+        - lines of code
+        - conditional branching
+
+    - automated testing packages can compute test coverage.
+
 
 ===============================================================================================
 
@@ -207,15 +314,55 @@ f. Test coverage analysis
 
 a. Business continuity planning
 
-    -
+    - The set of controls designed to keep a business running in the face of adversity,
+        whether natural or man-made.
+
+**** EXAM TIPS **********
+    - Business continuity planning is also known as contunity of operations planning (COOP).
+*************************
+
+    - Availability
+
+    - Defining the BCP Scope.
+        - What business acitivities will the plan cover?
+        - What systems will it cover?
+        - What controls will it consider?
+
+    - Business Impact Assessment (BIA)
+        - Identifies and prioritizes risks
+
+****** EXAM TIPS ************
+    - Business continuity planning in the cloud is a partnership between providers and customers.
+*******************************
 
 b. Business continuity controls
 
-    -
+    - Single point of failure analysis
+        - identifies and removed SPOFs
 
-c. HIgh availability and fault tolerance
+    - SPOF analysis continues until the cost of addressing risks outweigs the benefit.
 
-    -
+
+c. High availability and fault tolerance
+
+    - High availability
+        - uses multiple systems to protect against service failure.
+
+    - fault tolerance
+        - makes a single system resilient against technical failure.
+
+    - Load balancing
+        - spreads demand across sytems
+
+    - three point of failures are:-
+        - power supply
+        - storage
+        - network
+
+***** EXAM TIPS ************
+    - RAID is a fault-tolerance technique, not a backup strategy.
+****************************
+
 
 ===============================================================================================
 
@@ -225,52 +372,175 @@ c. HIgh availability and fault tolerance
 
 a. Disaster recovery
 
-    -
+    - Disaster recovery capabilities are designed to restore a business to normal operations
+        as quickly as possible. Disaster recovery is a subset of business continuity.
+
+    - can be caused by environmental or man-made disaster.
+
+    - can come from internal or external source.
+
+    - moves to assessment mode from initial mode.
+
+    - disaster recovery metrics
+        - The recovery time objective (RTO) is the maximum amount of time that it should take to
+            recover a service after a disaster.
+
 
 b. Backups
 
-    -
+    - most important for an organization
+    - provide a data safetly net.
 
+    - backup media
+        - tape backup
+        - disk-to-disk backups
+        - cloud backups
+     
+    - full backups
+        - include a complete copy of all data
+
+    - differential backups          *************
+        - include all data modified since the last full backup
+
+    - incremental backups           **********************
+        - include all data modified since the last full or incremental backup
+
+    
 c. Restoring backups
 
-    -
+    - non-persistence 
+    - configuration problems may be corrected by reverting to a known state.
+    - live boot media may allow recovery of data from a device witha corrupted os.
+
 
 d. Disaster recover sites
 
-    -
+    - hot site
+        - fully operational data centers
+        - stocked with equipment and data
+        - available at a moment's nontice
+        - very expensive    
+    
+    - cold sites
+        - empty data centers
+        - stocked with core equipment, network, and environmental controls
+        - relatively inexpensive
+        - operational in weeks or months
 
+    - warm sites
+        - stocked with all necessary equipment and data
+        - not maintained in a parallel fashion
+        - similar in expense to hot sites
+        - available in hours or days
+
+    - offsite storage
+        - geographically distant
+        - site resiliency
+        - manual transfer or site replication through SAN or VM
+
+        
 e. Testing BC/DR plans
 
-    -
+    - Disaster recovery testing goals
+        - validate that the plan functions correctly
+        - identifies necessary plan updates
+
+    - disaster recovery test types
+        - read-through
+            - read-through ask each team member to rewview their role in the disaster recovery process
+                provide feedback.
+
+        - walk-through
+            - walk-throughs gather the team together for a formal review of the disaster recovery plan.
+
+        - simulation
+            - simulation use a practice scenario to test the disaster recovery plan.
+
+        - parallel test
+            - parallel tests activate the disaster recovery environment but do not switch operations
+                there.
+    
+        - full interuption test
+            - Full-interuption test switch primary operations to the alternate environment and can be
+                very disruptive to business.
+
+    - often combination of muliple types of tests.
+ 
 
 f. After action reports
 
-    -
+    - After action reports crate a formal record of a disaster recovery (DR) or business continity
+        (BC) event.
 
+    - AAR (After Action Reports)
+
+    - Conduct after action reviews after every BC or DR event, even those that are considered
+        successful.
+
+    - Begin with report with a brief executive summary.
+
+    - provide enough background to allow the reader to understand the context.
+
+    - answer all the key factual questions around the event.
+        - what? where? when? why?
+
+    - should include lesson leaered during the response.
+
+    - conclude with clear next steps.
+ 
 ===============================================================================================
 
 7. Assessing security processes
 
 ==============================================================================================
 
-a. Collect secuirty process data
+a. Collect security process data
 
-    -
+    - Management and operational controls supplement technnical controls.
+
+    - SIEMs process and correlate the information.
+
+    - security process data
+        - records about management controls
+
+    - use consistent, repeatable processes for gathering security information.
+
 
 b. Management review and approval
 
-    -
+    - management reviews serve as a check-and-balance.
+
+    - two important role:-
+        - verify accuracy and completeness
+        - create a culture of oversigh.
+
+    - privileged user action reviews
+
 
 c. Security metrics
 
-    -
+    - Key performance indicator (KPIs)
+    
+    - Key risk indicator (KRIs)
+
 
 d. Audits and assessments
 
-    -
+    - assesments are usually requested internally while audits are often imposed by external 
+        requirements.
+
+    - audits follows a formal standard and use planned tests.
+
+    - gap analysis
+
 
 e. Control management
 
-    -
+    - organizations should test security controls regularly.
+
+    - every rule has an exception
+        - and exceptions must be carefully managed! 
+
+
 
 ==============================================================================================
