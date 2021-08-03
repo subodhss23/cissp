@@ -424,25 +424,64 @@ a. Understand authorization
     - Be able to identify leaset privilege and separation of duties issue in the scenario.
 ****************************
 
-b. Mandatory access controls
+b. Mandatory access controls(MAC)
+     - Access control system where the operating system restricts authorizations based upon
+        labels and users are not permitted to modify those authorizations.
+    
+    - SELinux provides MAC funtionality.
+ 
 
-    -
+c. Discretionary access controls(DAC)
+    - Access control system where permissions may be set by the owners of files, computers,
+        and other resources.
 
-c. Discretionary access controls
-
-    -
+    - Windows New Technology File System (NTFS) permissions are an example of a
+        discretionary access control system. 
 
 d. Access control lists
-
-    -
+    - Resource owners set DAC permissions through the use of access control lists.
+    
+    - NTFS Permissions
+     - read, write, execute
 
 e. Database access control
+    - SQL Server Authentication
+        - uses local database user accounts
+    - Windows Authentication
+        - Uses underlying server user accounts
+    - Mixed Authentication
+        - Uses both SQL Server and Windows authentication
 
-    -
+    - Role-based authorization manages permissions through roles that are assigned to
+        users by administrators.
+
 
 f. Advanced authorization concepts
 
-    -
+    - Implicit Deny
+        - Any action which is not explicitly allowed must be denied.
+    
+****** EXAM TIPS ***********
+    - The default deny principle is a cruical concept for the exam, firewall.
+****************************
+
+    - RBAC
+        - Role-based access control systems, permissions are grouped together into 
+        functional roles and users are assigned to those roles.
+
+    - ABAC
+        - Attribute-based access control (ABAC) systems, admininstrators make access contrl
+        descisions based upon characteristics of the user, object, and environment.
+
+    - Location-Based control
+        - Limits access based upon geographic location
+
+    - Time-of-day restriction
+        - Limits access based login time
+
+******* EXAM TIPS ********
+    - Risk-based access controls apply stronger standards in situations posing greater risk.
+********************************
 
 
 ================================================================================================
@@ -453,22 +492,67 @@ f. Advanced authorization concepts
 
 a. Social engineering
 
-    -
+    - Manipulating people into divulging information or performing an action that undermines
+        security.
+
+    - Six reasons why social engineering is successful:-
+        - Authority                 - Intimidation
+        - Consensus                 - Scarcity
+        - Urgency                   - Familiarity
+
+    - Education is the solution.
+
 
 b. Impersonation attacks
 
-    -
+    - Spam
+        - Unsolicated commercial email
+
+    - Prepending attacks seek to impersonate security filters.
+
+    - Credential harvesting
+    
+    - Spear Phishing
+        - Trageted attack
+
+    - Whaling
+        - Targeted attacks on executives.
+
+    - Pharming 
+        - Using gake websites
+
+    - Vishing
+        - Voice phishing
+
+    - Smishing and SPIM
+        - SMS and IM spam
+
+    - Spoofing
+        - faking an identity
+
+    - Impersonation Attacks
+
 
 c. Identity fraud and pretexting
 
-    -
+    - Pretexting attacks
+        - Impersonate a consumer.
+
+    - Use strong authentication procedures to protect against pretexting.
+
 
 d. Water hole attacks
 
-    -
+    - websites spreading malware.
 
 e. Physical social engineering
 
-    -
+    - dumpster diving
+        - shred sensative document.
+
+    - tailgating
+        
+    - physical social engineering
+
 
 ===============================================================================================         
