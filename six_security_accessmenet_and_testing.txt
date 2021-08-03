@@ -1,0 +1,276 @@
+
+
+
+===============================================================================================
+
+1. Vulnerability Scanning
+
+==============================================================================================
+
+a. What is vulnerability management?
+
+    - Vulnerability paching process.
+    
+    - Vulnerability management
+        - detects, remediates, and reports vulnerabilities.
+
+     - PCI DSS requirements
+        - conduct quarterly internaly and external vulnerability scans
+        - repeat scan after any signinficant change
+        - use an approved scanning vendor (ASV)
+
+    - FISMA requirements
+        - conduct vulnerability scan regularly
+        - analyze the result of scans
+        - remedicate legitimate vulnerabilities
+        - share information with other agancies
+
+b. Identify scan targets
+
+    - Asset inventory
+       - provides the starting point for vulnerability scanning
+
+    - vulnerability scanner can generate system inventories.
+
+    - Nessus
+
+    - Three key areas:-
+        i) Impact
+        ii) Likelihood
+        iii) Criticality
+
+    - You need an asset inventory even if you choose to scan all of your systems.
+
+
+c. Scan configuration
+
+    - setting up nessus
+    
+
+d. Scan prespective
+
+    - Firewall settings, IDS/IPS rules, and network segmentation all impact scan results.
+
+    - Agent-based scanning
+        - installs software on each target device
+
+    - Credentialed scanning
+        - Uses password to log into systems
+
+
+e. Analyzing scan reports
+
+    - Cybersecurity analysts need to present diffenet information to different audiences.
+
+    - Prioritization Facotrs
+        - Vulnerability severity
+        - System criticality
+        - Information sensitivity
+        - Remediation difficulty
+
+    - Vulnerability Validation
+        - Confirms accuracy
+
+    - False positive
+
+
+f. Correlating scan results
+
+    - Correlate scan result with other souce of information.
+    - Consult industry standards, best practices, and compliance requirements.
+
+    - PCI DSS CVSS Scores
+
+    - Technical information sources
+    
+    - Trend analysis
+
+
+===============================================================================================
+
+2. Penetration Testing
+
+==============================================================================================
+
+a. Penetration testing
+
+    - executing attacks
+
+    - document the rulles of engagement before beginning a penetration test.
+
+    - whitbox test
+    - gray box test
+    - blackbox test
+
+    - penetration testing process
+        - discover process
+        - attack phase
+            - gaining access
+            - escalating privileges
+            - system browsing
+            - install additional tool
+
+    - Pivot
+        - After exploiting a vulnerability in a system, attacker use the system as a base
+             from which to target other systems on the same local network.
+
+    - Presistence
+        - After exploiting a vulnerability in a system, attackers install tools on that system
+            to allow future access-even if the intial vulnerability is corrected.
+
+    - Breach and attack simulation (BAS)
+        - platforms that automate penetration testing by injecting threat indicators onto
+            systems and networks
+
+
+b. Ethical discolsure
+
+    - zero-day vulnerability
+    - the window of vulnerability begin
+
+    - vulnerability disclosure options
+        - share privately with the vendor
+        - share publicly with the security community
+        - keep knowledge secret for persnal use or sale
+
+    - Responsible disclosure
+
+
+c. Bug bounty
+
+    - bug bounty programs
+
+d. Cybersecurity exercises
+
+    - identify vulnerabilities in systems
+    - provide participants with hands-on experience attacking and securing systems.
+
+    - Red team
+    - blue team
+    - white team
+
+    - purple team
+
+    - capture the flag
+    
+    - use sandbax
+
+==============================================================================================
+
+3. Log Reviews
+
+============================================================================================
+
+a. Loggin security information
+
+    -
+
+b. Security information and event management
+
+    -
+
+==============================================================================================
+
+4. Code testing
+
+=============================================================================================
+
+a. Code review
+
+    -
+
+b. Code tests
+
+    -
+
+c. Fuzz testing
+
+    -
+
+d. Interface testing
+
+    -
+
+e. Misuse case testing
+
+    -
+
+f. Test coverage analysis
+
+    -
+
+===============================================================================================
+
+5. Business continuity planning
+
+==============================================================================================
+
+a. Business continuity planning
+
+    -
+
+b. Business continuity controls
+
+    -
+
+c. HIgh availability and fault tolerance
+
+    -
+
+===============================================================================================
+
+6. Disaster recovery planning
+
+==============================================================================================
+
+a. Disaster recovery
+
+    -
+
+b. Backups
+
+    -
+
+c. Restoring backups
+
+    -
+
+d. Disaster recover sites
+
+    -
+
+e. Testing BC/DR plans
+
+    -
+
+f. After action reports
+
+    -
+
+===============================================================================================
+
+7. Assessing security processes
+
+==============================================================================================
+
+a. Collect secuirty process data
+
+    -
+
+b. Management review and approval
+
+    -
+
+c. Security metrics
+
+    -
+
+d. Audits and assessments
+
+    -
+
+e. Control management
+
+    -
+
+==============================================================================================
