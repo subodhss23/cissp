@@ -415,7 +415,14 @@ h. Provisioning and deprovisioning
 
 a. Understand authorization
 
-    -
+    - Least privilege
+    - Separation of duties
+    - privilege creep
+    - account review
+
+****** EXAM TIPS *********
+    - Be able to identify leaset privilege and separation of duties issue in the scenario.
+****************************
 
 b. Mandatory access controls
 
