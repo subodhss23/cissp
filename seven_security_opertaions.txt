@@ -1,0 +1,149 @@
+
+==================================================================
+1. Investigations and Forensics
+===================================================================
+
+a. Conducting investigation
+
+    - Operational or administrative investigation   
+    - Criminal investigation
+    - civil investigation
+    - regulatory investigation
+
+**** EXAM TIPS *****
+    - Cybersecurity investigators should leave interrogations to law enforcement!
+********************
+
+
+b. Evidence types
+
+    - Real evidence
+        - consists of tangiable objects    
+    
+    - Documentary evidence
+        - Consists of written information
+
+    - Testimonial evidence
+        - consists of witness statements
+
+        - Direct Evidence
+        - Expert Opinion
+
+
+c. introduction to forensics
+
+    - digital forensics
+    
+    - investigations must never alter evidence.
+
+    - Volatility
+        - the relative permanence of a piece of evidence; evidence that may not last long
+            is more volatile than more permanent souces of evidence.
+    
+    - Order of volatility
+        - network traffic
+        - memory contents
+        - system and process data
+        - files
+        - logs
+        - archived records
+    
+
+d. System and file forensics
+
+    - Never alter or use original evidence, make a copy of it.
+
+    - Hashes protect evidence
+        - they provide a unique file signature.
+
+    - file metadata contains a wealth of forensic information.
+
+***** EXAM TIPS ******
+    - Never try to perform forensics yourself unless you're received appropriate training.
+*************************
+
+
+e. Network forensics
+
+    - Network communications may be intercepted.
+
+    - 
+
+f. Software forensics
+
+    -
+
+g. Mobile device forensics
+
+    -
+
+h. Embedded devices forensics
+
+    -
+
+i. Chain of custody
+
+    -
+
+j. Reporting and documenting incidents
+
+    -
+
+k. Electronic discovery (ediscoery)
+
+    -
+
+
+
+================================================================================
+2. Logging and monitoring
+============================================================================
+
+a. Security information and event management
+
+    -
+
+b.  Continous security monitoring
+
+    -
+
+c. Endpoint monitoring
+
+    -
+
+
+
+===================================================================================
+3. Resources Security
+==================================================================================
+
+a. Physical asset management
+
+    -
+
+b. Change and configuration management
+
+    -
+
+===================================================================================
+4. Security principles
+===================================================================================
+
+a. Need to know and least privilege
+
+    -
+
+b. Separation of duties and responsibilities
+
+    -
+
+c. Privileged account management
+
+    -
+
+
+===================================================================================
+5. Incident management
+==================================================================================
+
+a. Building an 
