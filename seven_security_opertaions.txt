@@ -67,31 +67,42 @@ e. Network forensics
 
     - Network communications may be intercepted.
 
-    - 
+    - wireshark
+    - netflow data
+     
 
 f. Software forensics
 
-    -
+    - intellectual property
+    - malware origins
+
+    - email header metadata may be useful for forensic analysis.
+
+    - metadata is very important
 
 g. Mobile device forensics
 
-    -
+    - mobile devices are typically protected by strong encryption
 
 h. Embedded devices forensics
 
-    -
+    - modern car has collecion of embedded devices.
 
 i. Chain of custody
 
-    -
+    - evudence for later analysis
+    - evidence log entry
 
 j. Reporting and documenting incidents
 
-    -
+    - notify key stakeholders promptly
+    - formal incident report
+        - create historical documentation
+
 
 k. Electronic discovery (ediscoery)
 
-    -
+    - 
 
 
 
@@ -101,8 +112,17 @@ k. Electronic discovery (ediscoery)
 
 a. Security information and event management
 
-    -
+    - AI can help to analyse.
+    
+    - two function
+        - central, secure collection point for logs
+            - all systems send log entries directly to the SIEM
+        - source of artificial interlligence
+            - SIEMs detecht patterns that other systems might miss
 
+    - Intrusion detecion system
+        - triggers the initial alert
+        
 b.  Continous security monitoring
 
     -
