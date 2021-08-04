@@ -122,15 +122,28 @@ a. Security information and event management
 
     - Intrusion detecion system
         - triggers the initial alert
+    
+    - SIEM dashboard
+
+    - SOAR platform
+        - playbooks 
         
+   
 b.  Continous security monitoring
 
-    -
+    - monitoring process
+        - define
+        - establish
+        - implement
+        - analyze/report
+        - respond
+        - review/update
+
+    - anomaly analysis
 
 c. Endpoint monitoring
 
-    -
-
+    - monitor processor, memory, and file system activity.
 
 
 ===================================================================================
@@ -139,11 +152,15 @@ c. Endpoint monitoring
 
 a. Physical asset management
 
-    -
+    - keeping track of laptop or hardware supplied to employee 
+    - keep track of change management
+   
 
 b. Change and configuration management
 
-    -
+    - changemanagement
+    - baseline
+    
 
 ===================================================================================
 4. Security principles
@@ -151,19 +168,161 @@ b. Change and configuration management
 
 a. Need to know and least privilege
 
-    -
+    - need to know
+        - limits information access
+        - least privilege
+            - limits system permissions
+        - privilege aggregation/ privilege creep
+            - jeopardizes least privilege
+        - 
 
 b. Separation of duties and responsibilities
 
-    -
+    - no individual should posses two permissions that, in combination, allow them to
+        perform a highly sensitive action.
+
+    - two-person control
+        - requires the authorization of two separate individuals to carry out a 
+            sensitive action; also known as dual control
+
 
 c. Privileged account management
 
-    -
+    - password vaulting
+        - stores admin passwords
+
+    - command proxying
+        - eliminates the need of direct server access
+
+    
 
 
 ===================================================================================
 5. Incident management
 ==================================================================================
 
-a. Building an 
+a. Building an incident response program
+
+   - NIST 800-61
+    
+    - Incident response plan
+        - provides structure during cybersecurity incidents
+            - statment of purpose
+            - strategies and goals for incident response
+            - approach to incident response
+            - communication with other groups
+    
+
+b. Creating an incident response team
+
+    - must be available 24/7.
+   
+     - building an IR Team
+        - management
+        - information security
+        - subject matter experts
+        - lega counsel
+        - public affairs
+        - human resources
+        - physical security
+
+    - workout the contractual details in advance of a cybersecurity incident.
+ 
+
+c. Incident identification
+
+    - communication plans ensure that all participants have timely, accurate information.
+
+d. Escalation and notification
+
+    - incident data source
+        - IDS/IPS
+        - firewalls
+        - authentication systems
+        - integrity monitors
+        - vulnerability scanners
+        - system event logs
+        - netflow records
+        - antimalware packages
+
+    - SIEM
+        - central log repository
+
+    - the first resports of an incident may come from external sources.
+
+    - first responders must act quickly
+        - isolate affected systems.
+
+    - triaging incidents
+
+
+e. Mitigation
+
+    - control damange and loss to the organization throgh containment.
+
+    - containment strategy evaluation
+        - damange potential
+        - evidence preservation
+        - service availability
+        - resource requirements
+        - expected effeciveness
+        - solution time frame
+
+    - attacker may detect containment actions.
+
+
+f. containment techniques
+
+    - the first hours of an incident response are stressful.
+
+    - NIST incident response process
+
+    - containment
+        - limit the damange
+        
+        - segmentation
+        - isolation
+        - removal
+
+
+g. incident eradication and recovery
+
+    - Eradication
+        - removes all traces of an incident
+
+    - Recovery
+        - restores normal operations
+
+    - Eradication and recovery acitivities are colosely linked.
+
+    - Attackers compromise systems
+        - rebuild any affected systems to avoid future issues.
+
+    - endpoint security practices
+        - application whitelisting
+        - application blacklisting
+        - quarantine
+      
+    - sanitization and secure disposal prevents confidential information leakage.
+        - clearing - overwriting
+        - purging  - more advance 
+        - destroying - physically destroying
+
+    - NIST incident response process
+
+    - validation process
+        - verify the secure configuration of every system
+        - run vulnerability scans
+        - perform account and permission reviews
+        - verify that systems are logging and communicating security information to the SIEM
+        - 
+
+h. validation
+
+    -
+
+i. post-incident activities
+
+    -
+
+j. incident response exercise
