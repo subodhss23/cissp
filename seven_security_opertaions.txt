@@ -308,6 +308,8 @@ g. incident eradication and recovery
         - purging  - more advance 
         - destroying - physically destroying
 
+  h. validation
+
     - NIST incident response process
 
     - validation process
@@ -315,14 +317,39 @@ g. incident eradication and recovery
         - run vulnerability scans
         - perform account and permission reviews
         - verify that systems are logging and communicating security information to the SIEM
-        - 
-
-h. validation
-
-    -
+       
+    - validate that you have successfully restored all capabilities and services.
+    
 
 i. post-incident activities
 
-    -
+    - lesson learned 
+        -provide incident responders with an opportunity to reflect on the incident
+        response efforts and offer ffeback that will improve the organization's
+        response to future incidents.
+
+    - time is of the essence.
+
+    - NIST guidelines
+
+    - create a report that includes lessons learned and recommendations.
+
+    - follow your change management process.
+
+    - Incident summary report
+        - Describes response efforts
+
+    - Retain anay evidence necessary to comply with company policy and legal requirements.
+
 
 j. incident response exercise
+
+    - Read-through(checklist) ask each team member to review their role in the plan.
+
+    - Walk-throughs or tabletop exercises, gather the team together.
+
+==========================================================================================
+6. Personal safety
+=========================================================================================
+
+
